@@ -1,0 +1,26 @@
+#######################################
+# Syntax Coloring Map For Entropy
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+Entropy	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+random	KEYWORD2
+randomByte	KEYWORD2
+randomWord	KEYWORD2
+available	KEYWORD2
+initialize	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+WDT_RETURN_BYTE	LITERAL1
+WDT_RETURN_WORD	LITERAL1

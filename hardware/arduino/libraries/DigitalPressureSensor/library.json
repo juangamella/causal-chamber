@@ -1,0 +1,13 @@
+{
+  "name": "Digital-Pressure-Sensor",
+  "keywords": "barometric, pressure, temperature, sensor, shield2go",
+  "description": "This library is deprecated use this https://github.com/Infineon/arduino-xensiv-dps3xx instead. Library of Infineon's highly sensitive DPS310 sensor and DPS422 sensor for Arduino.",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/Infineon/DPS310-Pressure-Sensor.git"
+  },
+  "version": "1.0.8",
+  "frameworks": "arduino",
+  "platforms": "infineonxmc"
+}

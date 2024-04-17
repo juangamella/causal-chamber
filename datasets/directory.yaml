@@ -1,0 +1,87 @@
+last_updated: 2024-04-17
+datasets:
+  wt_changepoints_v1:
+    chamber: "wt"
+    image: False
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/wt_changepoints_v1.zip"
+    md5: "7e9f26d192674f2aaa6481f4415007eb"
+  wt_walks_v1:
+    chamber: "wt"
+    image: False
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/wt_walks_v1.zip"
+    md5: "70460483f6002003f7588deb05f0ec16"
+  lt_camera_walks_v1:
+    chamber: "lt"
+    image: True
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_camera_walks_v1.zip"
+    md5: "f3b50b0df634aec50c70df7550a8f6ea"
+  lt_walks_v1:
+    chamber: "lt"
+    image: False
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_walks_v1.zip"
+    md5: "30a7d43b84e57f52bfd4b542f7a28b3c"
+  lt_test_v1:
+    chamber: "lt"
+    image: False
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_test_v1.zip"
+    md5: "16755c741755c795f609d2e42ea9ee18"
+  wt_intake_impulse_v1:
+    chamber: "wt"
+    image: False
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/wt_intake_impulse_v1.zip"
+    md5: "8b7a0e587d3e9a804b380d96f14a1b12"
+  lt_color_regression_v1:
+    chamber: "lt"
+    image: True
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_color_regression_v1.zip"
+    md5: "8e2742277e7ad978301eb830148e1d40"
+  lt_interventions_standard_v1:
+    chamber: "lt"
+    image: False
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_interventions_standard_v1.zip"
+    md5: "476664d024f88e8b7640998bb5e9ee33"
+  lt_malus_v1:
+    chamber: "lt"
+    image: False
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_malus_v1.zip"
+    md5: "cc49b95d85410e0b5ea3bcd1479428e3"
+  lt_validate_v1:
+    chamber: "lt"
+    image: False
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_validate_v1.zip"
+    md5: "0ef64de36bf8fdfff3df539cadf460ab"
+  lt_camera_validate_v1:
+    chamber: "lt"
+    image: True
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_camera_validate_v1.zip"
+    md5: "d347d70f1a7c7444cacbf17e259aa068"
+  lt_camera_test_v1:
+    chamber: "lt"
+    image: True
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_camera_test_v1.zip"
+    md5: "9e825f53a1e53077ff329c8d8a31dbc0"
+  wt_validate_v1:
+    chamber: "wt"
+    image: False
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/wt_validate_v1.zip"
+    md5: "bde214eb50abc801307bf7d4aadcafc9"
+  wt_pc_validate_v1:
+    chamber: "wt"
+    image: False
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/wt_pc_validate_v1.zip"
+    md5: "3763de7a1a2715d5789d6e95464249c0"
+  wt_bernoulli_v1:
+    chamber: "wt"
+    image: False
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/wt_bernoulli_v1.zip"
+    md5: "00d6abbdf42ed953ca94dc107067ea56"
+  wt_test_v1:
+    chamber: "wt"
+    image: False
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/wt_test_v1.zip"
+    md5: "5eed621f5b54e431c4442fc9cc947db6"
+  wt_pressure_control_v1:
+    chamber: "wt"
+    image: False
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/wt_pressure_control_v1.zip"
+    md5: "8cb1c9bf19cedc5baea7a9c15e54af6a"

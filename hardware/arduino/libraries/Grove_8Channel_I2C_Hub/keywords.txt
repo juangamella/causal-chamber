@@ -1,0 +1,35 @@
+  
+#######################################
+# Syntax Coloring Map For 
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+TCA9548A KEYWORD1
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+TCA	KEYWORD2
+openAll KEYWORD2
+closeAll KEYWORD2
+openChannel	KEYWORD2
+closeChannel KEYWORD2
+
+TCA_CHANNEL_0 KEYWORD2
+TCA_CHANNEL_1 KEYWORD2
+TCA_CHANNEL_2 KEYWORD2
+TCA_CHANNEL_3 KEYWORD2
+TCA_CHANNEL_4 KEYWORD2
+TCA_CHANNEL_5 KEYWORD2
+TCA_CHANNEL_6 KEYWORD2
+TCA_CHANNEL_7 KEYWORD2
+
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################

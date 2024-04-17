@@ -1,0 +1,46 @@
+column_name,latex_name,description
+timestamp,,The timestamp (in unix time) of the measurement with an error of a few milliseconds.
+config,,The configuration of the chamber when this measurement was taken.
+counter,,The counter of this measurement - used for error control.
+flag,,User-defined flag.
+intervention,,Has a value of 1 if this is the first measurement after a SET instruction - 0 otherwise.
+hatch,H,See appendix II of the original paper.
+pot_1,A_1,See appendix II of the original paper.
+pot_2,A_2,See appendix II of the original paper.
+osr_1,O_1,See appendix II of the original paper.
+osr_2,O_2,See appendix II of the original paper.
+osr_mic,O_M,See appendix II of the original paper.
+osr_in,O_\text{in},See appendix II of the original paper.
+osr_out,O_\text{out},See appendix II of the original paper.
+osr_upwind,O_\text{up},See appendix II of the original paper.
+osr_downwind,O_\text{dw},See appendix II of the original paper.
+osr_ambient,O_\text{amb},See appendix II of the original paper.
+osr_intake,O_\text{int},See appendix II of the original paper.
+v_1,R_1,See appendix II of the original paper.
+v_2,R_2,See appendix II of the original paper.
+v_mic,R_M,See appendix II of the original paper.
+v_in,R_\text{in},See appendix II of the original paper.
+v_out,R_\text{out},See appendix II of the original paper.
+load_in,L_\text{in},See appendix II of the original paper.
+load_out,L_\text{out},See appendix II of the original paper.
+current_in,\tilde{C}_\text{in},See appendix II of the original paper.
+current_out,\tilde{C}_\text{out},See appendix II of the original paper.
+res_in,T_\text{in},See appendix II of the original paper.
+res_out,T_\text{out},See appendix II of the original paper.
+rpm_in,\tilde{\omega}_\text{in},See appendix II of the original paper.
+rpm_out,\tilde{\omega}_\text{out},See appendix II of the original paper.
+pressure_upwind,\tilde{P}_\text{up},See appendix II of the original paper.
+pressure_downwind,\tilde{P}_\text{dw},See appendix II of the original paper.
+pressure_ambient,\tilde{P}_\text{amb},See appendix II of the original paper.
+pressure_intake,\tilde{P}_\text{int},See appendix II of the original paper.
+mic,\tilde{M},See appendix II of the original paper.
+signal_1,\tilde{S}_1,See appendix II of the original paper.
+signal_2,\tilde{S}_2,See appendix II of the original paper.
+input,,The control input (target) for the PID controler - see appendix III for more details.
+error,,The control error of the PID controler - see appendix III for more details.
+delta_error,,The derivative of the control error of the PID controler - see appendix III for more details.
+sum_error,,The integral of the control error of the PID controler - see appendix III for more details.
+gain_p,,The proportional gain K_p of the PID controller - see appendix III for more details.
+gain_i,,The integral gain K_i of the PID controller - see appendix III for more details.
+gain_d,,The derivate gain K_d of the PID controller - see appendix III for more details.
+output,,The control output produced by the PID controler - see appendix III for more details.

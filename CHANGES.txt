@@ -1,0 +1,14 @@
+v0.1.0, 2024-04-17
+-- Fixed variable name in latex name definitions
+-- Refactoring: moved functions in causalchamber.datasets.utils to new module causalchamber.utils
+v0.0.4, 2024-03-26
+-- Fixed image in README.md
+v0.0.3, 2024-03-26
+-- Added tqdm dependency
+-- README.md for the package
+-- Unit tests to check dataset access and consistency
+v0.0.2, 2024-03-25
+-- Added yaml, Pillow and requests dependencies
+-- Fetch available datasets on import
+v0.0.1, 2024-03-25
+-- Initial release of the package

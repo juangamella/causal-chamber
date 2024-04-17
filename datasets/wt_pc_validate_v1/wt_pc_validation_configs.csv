@@ -1,0 +1,2 @@
+from,to,T,N,xA,xB,hatch,pot_1,pot_2,osr_1,osr_2,osr_mic,osr_in,osr_out,osr_upwind,osr_downwind,osr_ambient,osr_intake,v_1,v_2,v_mic,v_in,v_out,res_in,res_out
+pressure_downwind,loads,0,50,93000,95000,0,0,0,8,8,8,8,8,8,8,8,8,5,5,5,1.1,1.1,1,1
