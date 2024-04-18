@@ -48,7 +48,7 @@ See the table [below](#dataset-description) for all the available experiments an
 
 The dataset contains experiments showing the effect of the polarizer angles ($\theta_1, \theta_2$) on the measurements of the third light-intensity sensor ($\tilde{I}_3, \tilde{V}_3$). In each experiment, we rotate the polarizers to random angles and take a measurement at each position, while keeping all other manipulable variables constant. We do this for different settings of the light source.
 
-The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](XXXXX) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
+The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|

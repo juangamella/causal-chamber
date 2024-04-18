@@ -2,7 +2,7 @@
 
 ![The Causal Chambers: (left) the wind tunnel, and (right) the light tunnel with the front panel removed to show its interior.](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/the_chambers.jpg)
 
-This repository contains datasets collected from the _causal chambers_, the two devices described in the 2024 paper [*The Causal Chambers: Real Physical Systems as a Testbed for AI Methodology*](XXXXX) by Juan L. Gamella, Jonas Peters and Peter Bühlmann. The repository is updated as we collect new datasets from the chambers.
+This repository contains datasets collected from the _causal chambers_, the two devices described in the 2024 paper [*The Causal Chambers: Real Physical Systems as a Testbed for AI Methodology*](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>) by Juan L. Gamella, Jonas Peters and Peter Bühlmann. The repository is updated as we collect new datasets from the chambers.
 
 The datasets are publicly available through a permissive [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). This means you are free to use, share and modify the datasets as long as you give appropriate credit and communicate changes. If you use the datasets in your scientific work, please consider citing:
 
@@ -15,7 +15,7 @@ The datasets are publicly available through a permissive [CC BY 4.0 license](htt
 }
 ```
 
-This repository also contains the source code for the `causalchamber` [package](https://pypi.org/project/causalchamber/) to directly [import the datasets into your Python code](#downloading-the-datasets). The package also provides Python implementations of the [mechanistic models](#mechanistic-models) described in appendix IV of the original [paper](XXXXX).
+This repository also contains the source code for the `causalchamber` [package](https://pypi.org/project/causalchamber/) to directly [import the datasets into your Python code](#downloading-the-datasets). The package also provides Python implementations of the [mechanistic models](#mechanistic-models) described in appendix IV of the original [paper](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>).
 
 Here you can also find the resources to [build the chambers](#building-the-chambers), and the datasheets for all chamber components (see [`hardware/`](hardware/)).
 
@@ -57,7 +57,7 @@ If you use Python, you can directly import a dataset into your code through the 
 pip install causalchamber
 ```
 
-in an appropriate shell. Datasets can then be accessed directly from your Python code. For example, you can access the light-intensity data for the symbolic regression case study ([Fig. 6e](XXXXX)) as follows:
+in an appropriate shell. Datasets can then be accessed directly from your Python code. For example, you can access the light-intensity data for the symbolic regression case study ([Fig. 6e](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>)) as follows:
 
 ```python
 from causalchamber.datasets import Dataset
@@ -91,7 +91,7 @@ dataset.available_experiments()
 
 ## Mechanistic models
 
-The `causalchamber` [package](https://pypi.org/project/causalchamber/) also contains Python implementations of the mechanistic models described in appendix IV of the original [paper](XXXXX). The models follow the same nomenclature as in the paper, e.g., to import and run model A1 of the steady-state fan speed:
+The `causalchamber` [package](https://pypi.org/project/causalchamber/) also contains Python implementations of the mechanistic models described in appendix IV of the original [paper](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>). The models follow the same nomenclature as in the paper, e.g., to import and run model A1 of the steady-state fan speed:
 ```Python
 import numpy as np
 from causalchamber.models import model_a1
@@ -108,7 +108,7 @@ The implementations can be found in the [`src/causalchamber/models`](src/causalc
 
 ## Causal ground-truth graphs
 
-The graphs for the causal ground truths given in Fig. 3 of the original [paper](XXXXX) can be found as adjacency matrices in  the [`ground_truths/`](ground_truths/) directory. The adjacencies can also be loaded through the `causalchamber` [package](https://pypi.org/project/causalchamber/), e.g., 
+The graphs for the causal ground truths given in Fig. 3 of the original [paper](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>) can be found as adjacency matrices in  the [`ground_truths/`](ground_truths/) directory. The adjacencies can also be loaded through the `causalchamber` [package](https://pypi.org/project/causalchamber/), e.g., 
 ```python
 from causalchamber.ground_truth import graph
 graph(chamber="lt", configuration="standard")
@@ -136,7 +136,7 @@ Setting `enclose=False` will return the name without surrounding `$`.
 
 ## Building the chambers
 
-You can find the resources to build the chambers in [`hardware/`](hardware/), together with the datasheets for all physical components (see appendix VI of the original [paper](XXXXX)).
+You can find the resources to build the chambers in [`hardware/`](hardware/), together with the datasheets for all physical components (see appendix VI of the original [paper](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>)).
 
 ## Licenses
 

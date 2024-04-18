@@ -46,9 +46,9 @@ See the table [below](#dataset-description) for all the available experiments an
 |:-----------:|:-------------:|
 | Wind tunnel | standard      |
 
-The dataset contains experiments to show Bernoulli's principle in the difference between the measurements of the up- and downwind barometers. The effect is described in appendix IV.1.3 of the [manuscript](XXXXX). The dataset is used for the symbolic regression task in Fig. 6e.
+The dataset contains experiments to show Bernoulli's principle in the difference between the measurements of the up- and downwind barometers. The effect is described in appendix IV.1.3 of the [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>). The dataset is used for the symbolic regression task in Fig. 6e.
 
-The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](XXXXX) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
+The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
 
 | Experiment            | Generator                                                                                | Description |
 |:---------------------:|:----------------------------------------------------------------------------------------:|:------------|

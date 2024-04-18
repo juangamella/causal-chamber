@@ -77,7 +77,7 @@ experiment.available_sizes()
 
 ## Mechanistic models
 
-The `causalchamber` [package](https://pypi.org/project/causalchamber/) also contains Python implementations of the mechanistic models described in appendix IV of the original [paper](XXXXX). The models follow the same nomenclature as in the paper, e.g., to import and run model A1 of the steady-state fan speed:
+The `causalchamber` [package](https://pypi.org/project/causalchamber/) also contains Python implementations of the mechanistic models described in appendix IV of the original [paper](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>). The models follow the same nomenclature as in the paper, e.g., to import and run model A1 of the steady-state fan speed:
 ```Python
 import numpy as np
 from causalchamber.models import model_a1
@@ -94,7 +94,7 @@ The implementations can be found in the [`src/causalchamber/models`](src/causalc
 
 ## Causal ground-truth graphs
 
-The graphs for the causal ground truths given in Fig. 3 of the original [paper](XXXXX) can be found as adjacency matrices in  the `ground_truths/` directory of the [project repository](https://github.com/juangamella/causal-chamber). The adjacencies can also be loaded through the `causalchamber` [package](https://pypi.org/project/causalchamber/), e.g., 
+The graphs for the causal ground truths given in Fig. 3 of the original [paper](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>) can be found as adjacency matrices in  the `ground_truths/` directory of the [project repository](https://github.com/juangamella/causal-chamber). The adjacencies can also be loaded through the `causalchamber` [package](https://pypi.org/project/causalchamber/), e.g., 
 ```python
 from causalchamber.ground_truth import graph
 graph(chamber="lt", configuration="standard")

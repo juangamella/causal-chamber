@@ -46,9 +46,9 @@ See the table [below](#dataset-description) for all the available experiments an
 |:-----------:|:-------------:|
 | Wind tunnel | standard      |
 
-The manipulable variables of the wind tunnel are set according to different time series: either deterministic (e.g., sinusoid, sawtooth or square waves in the `actuator_mix` experiment) or stochastic, e.g., following a random walk. After each step, a measurement is collected from the chamber. The dataset is used in the causal discovery and ICA case studies of the original [paper](XXXXX) (tasks a3 and d2 in Fig. 5 and 6, respectively).
+The manipulable variables of the wind tunnel are set according to different time series: either deterministic (e.g., sinusoid, sawtooth or square waves in the `actuator_mix` experiment) or stochastic, e.g., following a random walk. After each step, a measurement is collected from the chamber. The dataset is used in the causal discovery and ICA case studies of the original [paper](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>) (tasks a3 and d2 in Fig. 5 and 6, respectively).
 
-The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](XXXXX) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
+The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|

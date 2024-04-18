@@ -48,7 +48,7 @@ See the table [below](#dataset-description) for all the available experiments an
 
 The dataset contains experiments in which single-target interventions of different strengths are performed on all of the light tunnel's manipulable variables. The light tunnel is operating in its standard configuration. Each experiment corresponds to a different intervention, where the target's distribution is shifted with respect to its *reference* distribution in the `uniform_reference` experiment.
 
-The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](XXXXX) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
+The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|
