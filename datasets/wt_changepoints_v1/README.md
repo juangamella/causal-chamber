@@ -46,9 +46,9 @@ See the table [below](#dataset-description) for all the available experiments an
 |:-----------:|:-------------:|
 | Wind tunnel | standard      |
 
-The dataset contains experiments where we repeatedly change the level of an actuator at random and take a random number of measurements while keeping all other actuators constant. The dataset is used in the original [paper](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>) for the change point detection task in Fig. 5c. Note that the first measurement after changing the value of an actuator or sensor parameter has a value of 1 in the `intervention` column..
+The dataset contains experiments where we repeatedly change the level of an actuator at random and take a random number of measurements while keeping all other actuators constant. The dataset is used in the original [paper](XXXXX) for the change point detection task in Fig. 5c. Note that the first measurement after changing the value of an actuator or sensor parameter has a value of 1 in the `intervention` column..
 
-The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
+The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](XXXXX) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|

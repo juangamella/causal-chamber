@@ -46,9 +46,9 @@ See the table [below](#dataset-description) for all the available experiments an
 |:-----------:|:----------------:|
 | Wind tunnel | pressure-control |
 
-This dataset contains experiments collected from the wind tunnel in its _pressure-control_ configuration, where the fan loads $`L_\text{in}, L_\text{out}`$ are set by a PID controller to keep the pressure measurement at the downwind barometer ($`\tilde{P}_\text{dw}`$) constant. More details about the control mechanism can be found in section 3 and appendix III of the original [paper](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>).
+This dataset contains experiments collected from the wind tunnel in its _pressure-control_ configuration, where the fan loads $`L_\text{in}, L_\text{out}`$ are set by a PID controller to keep the pressure measurement at the downwind barometer ($`\tilde{P}_\text{dw}`$) constant. More details about the control mechanism can be found in section 3 and appendix III of the original [paper](XXXXX).
 
-The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
+The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](XXXXX) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
 
 | Experiment | Generator                                                     | Description |
 |:----------:|:-------------------------------------------------------------:|:------------|

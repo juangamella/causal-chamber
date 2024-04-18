@@ -46,13 +46,13 @@ See the table [below](#dataset-description) for all the available experiments an
 |:--------:|:-------------:|
 | Light tunnel | standard      |
 
-The dataset contains experiments to characterize the different effects between variables in the light tunnel. The data are used for different calibration tasks and for the figures in appendix III of the [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>).
+The dataset contains experiments to characterize the different effects between variables in the light tunnel. The data are used for different calibration tasks and for the figures in appendix III of the [manuscript](XXXXX).
 
-The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
+The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](XXXXX) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|
-| analog\_calibration | [`generators/analog_calibration.py`](lt_test_v1/generators/analog_calibration.py) | Keeping $R, G, B, \theta_1, \theta_2$ constant, we take measurements at different reference voltages $R_C, R_1, R_2$ to calibrate the actual reference voltages produced by arduino board. The results can be found in Table 3 in appendix II of the [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>). |
+| analog\_calibration | [`generators/analog_calibration.py`](lt_test_v1/generators/analog_calibration.py) | Keeping $R, G, B, \theta_1, \theta_2$ constant, we take measurements at different reference voltages $R_C, R_1, R_2$ to calibrate the actual reference voltages produced by arduino board. The results can be found in Table 3 in appendix II of the [manuscript](XXXXX). |
 | angle\_sensors | [`generators/angle_sensors.py`](lt_test_v1/generators/angle_sensors.py) | Take measurements with different reference voltages and oversampling rates of the polarizer angle sensors ($\tilde{\theta}_1, \tilde{\theta}_2$), while progressively increasing the polarizer positions $\theta_1=\theta_2 \in [-180,-179,\ldots,180]$. |
 | current\_sensor | [`generators/current_sensor.py`](lt_test_v1/generators/current_sensor.py) | Set $R=G=B=0$ and collect $N=1000$ measurements for each combination $O_C, R_C \in \\{1,2,4,8\\} \times \\{1.1, 2.56, 5\\}$ |
 | ir\_sensors | [`generators/ir_sensors.py`](lt_test_v1/generators/ir_sensors.py) | Used in Fig. 13 of the original paper to illustrate the effect of the photodiode size and exposure time on the light sensor measurements. For each combination of infrared photodiode size ($D^I_1, D^I_2, D^I_3$) and exposure ($T^I_1, T^I_2, T^I_3$) take $N=500$ measurements where $R {\sim} \text{Unif}(0,\ldots,255)$, $G=B=0$ and all other actuators and parameters are kept constant. |

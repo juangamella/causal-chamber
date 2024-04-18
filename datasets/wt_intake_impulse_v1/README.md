@@ -46,9 +46,9 @@ See the table [below](#dataset-description) for all the available experiments an
 |:-----------:|:-------------:|
 | Wind tunnel | standard      |
 
-The dataset contains a collection of impulse-response curves, where we take measurements of all variables as a short impulse is applied to the intake fan load ($L_\text{in}$), while keeping all other manipulable variables constant. The dataset is used in the OOD generalization case study (task b3) shown in Fig. 5 of the [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>). This [notebook](https://github.com/juangamella/causal-chamber-paper/blob/main/case_studies/ood_impulses.ipynb) contains the code to reproduce the case study and offers a visualization of the dataset.
+The dataset contains a collection of impulse-response curves, where we take measurements of all variables as a short impulse is applied to the intake fan load ($L_\text{in}$), while keeping all other manipulable variables constant. The dataset is used in the OOD generalization case study (task b3) shown in Fig. 5 of the [manuscript](XXXXX). This [notebook](https://github.com/juangamella/causal-chamber-paper/blob/main/case_studies/ood_impulses.ipynb) contains the code to reproduce the case study and offers a visualization of the dataset.
 
-The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
+The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](XXXXX) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|

@@ -56,9 +56,9 @@ experiment.available_sizes()
 |:------------:|:-------------:|
 | Light tunnel | camera        |
 
-The dataset consists of experiments where the color of the light source ($R,G,B$) is set at random before taking each image, while the polarizer angles and camera parameters are kept constant. The different experiments correspond to variations in the values of the polarizer angles and camera parameters, or the range from which the values for $R,G,B$ are sampled (see the *brighter\_colors* experiment below). The dataset is used for task b2 (Fig. 5) of the original [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>).
+The dataset consists of experiments where the color of the light source ($R,G,B$) is set at random before taking each image, while the polarizer angles and camera parameters are kept constant. The different experiments correspond to variations in the values of the polarizer angles and camera parameters, or the range from which the values for $R,G,B$ are sampled (see the *brighter\_colors* experiment below). The dataset is used for task b2 (Fig. 5) of the original [manuscript](XXXXX).
 
-The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
+The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](XXXXX) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|
