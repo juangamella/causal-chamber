@@ -8,7 +8,7 @@ If you use any of the datasets or source code in your work, please consider citi
 @article{gamella2024chamber,
   title={The Causal Chambers: Real Physical Systems as a Testbed for AI Methodology},
   author={Gamella, Juan L. and B\"uhlmann, Peter and Peters, Jonas},
-  journal={arXiv preprint arXiv:TODO},
+  journal={arXiv preprint arXiv:2404.11341},
   year={2024}
 }
 ```
@@ -59,11 +59,11 @@ where `full` corresponds to `2000x2000` pixels.
 
 This dataset contains experiments where the manipulable variables are set according to different time series. After each step, a measurement is collected from the chamber, including an image taken by the camera.
 
-The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
+The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](https://arxiv.org/pdf/2404.11341.pdf) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|
-|   actuator\_mix  |    [`generators/actuator_mix.py`](lt_camera_walks_v1/generators/actuator_mix.py) | We vary the value of $R,G,B, \theta_1, \theta_2$ following a sine, sawtooth, chirp, triangular and square signal, respectively (see [`scipy.signal`](https://docs.scipy.org/doc/scipy/reference/signal.html#waveforms)). We collect a total of $N=10^4%$ observations. Used in task d3 of the ICA case study (Fig. 6 of the original [paper](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>)). |
+|   actuator\_mix  |    [`generators/actuator_mix.py`](lt_camera_walks_v1/generators/actuator_mix.py) | We vary the value of $R,G,B, \theta_1, \theta_2$ following a sine, sawtooth, chirp, triangular and square signal, respectively (see [`scipy.signal`](https://docs.scipy.org/doc/scipy/reference/signal.html#waveforms)). We collect a total of $N=10^4%$ observations. Used in task d3 of the ICA case study (Fig. 6 of the original [paper](https://arxiv.org/pdf/2404.11341.pdf)). |
 |   color\_mix  |    [`generators/color_mix.py`](lt_camera_walks_v1/generators/color_mix.py) | We vary the value of $R,G,B$ following a sine, square, and sawtooth wave, respectively. We collect a total of $N=10^4%$ observations. |
 
 ## Changelog

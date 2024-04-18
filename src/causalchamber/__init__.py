@@ -6,7 +6,7 @@ citation = """
 @article{gamella2024chamber,
   title={The Causal Chambers: Real Physical Systems as a Testbed for AI Methodology},
   author={Gamella, Juan L. and B\"uhlmann, Peter and Peters, Jonas},
-  journal={arXiv preprint arXiv:TODO},
+  journal={arXiv preprint arXiv:2404.11341},
   year={2024}
 }
 """

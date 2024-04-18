@@ -8,7 +8,7 @@ If you use any of the datasets or source code in your work, please consider citi
 @article{gamella2024chamber,
   title={The Causal Chambers: Real Physical Systems as a Testbed for AI Methodology},
   author={Gamella, Juan L. and B\"uhlmann, Peter and Peters, Jonas},
-  journal={arXiv preprint arXiv:TODO},
+  journal={arXiv preprint arXiv:2404.11341},
   year={2024}
 }
 ```
@@ -46,13 +46,13 @@ See the table [below](#dataset-description) for all the available experiments an
 |:------------:|:-------------:|
 | Light tunnel | camera        |
 
-This dataset contains the randomized experiments to validate the ground-truth graph of the light tunnel in its _camera_ configuration (Fig. 3b of the original [paper](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>)). The experiments in the dataset correspond to the validation procedure described in appendix V of the manuscript. For each edge, the values for $N, T, x^A, x^B$ are given in the file [`lt_camera_validation_configs.csv`](lt_camera_validate_v1/lt_camera_validation_configs.csv). The code to obtain the p-values shown in the tables of appendix V can be found in the separate [paper repository](https://github.com/juangamella/causal-chamber-paper).
+This dataset contains the randomized experiments to validate the ground-truth graph of the light tunnel in its _camera_ configuration (Fig. 3b of the original [paper](https://arxiv.org/pdf/2404.11341.pdf)). The experiments in the dataset correspond to the validation procedure described in appendix V of the manuscript. For each edge, the values for $N, T, x^A, x^B$ are given in the file [`lt_camera_validation_configs.csv`](lt_camera_validate_v1/lt_camera_validation_configs.csv). The code to obtain the p-values shown in the tables of appendix V can be found in the separate [paper repository](https://github.com/juangamella/causal-chamber-paper).
 
-The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
+The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](https://arxiv.org/pdf/2404.11341.pdf) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|
-| validate_aperture<br>validate_blue<br>validate_green<br>validate_iso<br>validate_pol_1<br>validate_pol_2<br>validate_red<br>validate_shutter_speed<br> | [`generators/binary_interventions.py`](lt_camera_validate_v1/generators/binary_interventions.py) | In each experiment we repeatedly set the manipulable variable given in the experiment name to a value picked randomly between two options ($x^A$ or $x^B$), as described in the validation procedure given in appendix V of the [manuscript](<https://placehold.co/600x400?text=Placeholder:\nArxiv link!>). |
+| validate_aperture<br>validate_blue<br>validate_green<br>validate_iso<br>validate_pol_1<br>validate_pol_2<br>validate_red<br>validate_shutter_speed<br> | [`generators/binary_interventions.py`](lt_camera_validate_v1/generators/binary_interventions.py) | In each experiment we repeatedly set the manipulable variable given in the experiment name to a value picked randomly between two options ($x^A$ or $x^B$), as described in the validation procedure given in appendix V of the [manuscript](https://arxiv.org/pdf/2404.11341.pdf). |
 
 ## Changelog
 
