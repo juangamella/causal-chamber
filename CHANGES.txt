@@ -1,3 +1,5 @@
+v0.1.1, 2024-05-08
+-- Minimum required Python lowered to 3.6
 v0.1.0, 2024-04-17
 -- Fixed variable name in latex name definitions
 -- Refactoring: moved functions in causalchamber.datasets.utils to new module causalchamber.utils
