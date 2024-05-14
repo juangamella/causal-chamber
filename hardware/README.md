@@ -15,6 +15,8 @@ Here you can find the resources to build the wind tunnel and light tunnel descri
 
 To build the chambers you will need some common assembly tools and access to some more specialized equipment: a laser cutter of sufficient size (we used the [Trotec Speedy 400](https://www.troteclaser.com/de-ch/lasermaschinen/lasergravurmaschine-speedy)) and an electronics bench (for soldering and testing). We assume that you already posses the pertinent knowledge to use them.
 
+If you would like to build the chambers but you lack the necessary skills or equipment, there is a *chance* we can build them for you or find an alternative solution. Please reach out to [Juan L. Gamella](mailto:juan.gamella@stat.math.ethz.ch) for inquiries.
+
 ## Licenses
 
 The blueprints and diagrams are licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). A copy of the license can be found in [LICENSE_HARDWARE.txt](LICENSE_HARDWARE.txt).
