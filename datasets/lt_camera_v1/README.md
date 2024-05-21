@@ -57,7 +57,7 @@ experiment.available_sizes()
 |:------------:|:-------------:|
 | Light tunnel | camera |
 
-The repository contains experiments where the chamber actuators $R,G,B,\theta_1,\theta_2$ are set independently and uniformly at random, while images are taken under different settings of the camera parameters.
+The repository contains experiments where the chamber actuators $R,G,B,\theta_1,\theta_2$ are set independently and uniformly at random and images are taken for each setting. We repeat the experiment with different random seeds (for the actuators) and changes to the camera parameters (aperture, sensor gain and shutter speed).
 
 The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](https://arxiv.org/pdf/2404.11341.pdf) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
 
