@@ -3,7 +3,7 @@
 Here you can find the resources to build the wind tunnel and light tunnel described in the original [paper](https://arxiv.org/pdf/2404.11341.pdf). In particular,
 
 - [`blueprints/`](blueprints/) contains the laser cutter designs for the framework and enclosures of the chambers.
-- [`electronics/`](blueprints/) contains the diagrams for the electronic components of the chambers.
+- [`electronics/`](blueprints/) contains the schematics for the electronic components of the chambers.
 - [`component_list.md`](component_list.md) contains a list of all necessary components to build each chamber, including all the sensors and the camera.
 - [`arduino/`](arduino/) contains the code that runs on the control computers aboard the chambers, including all necessary libraries.
 - [`control/`](control/) contains the Python application to send commands and receive data from the chambers.
@@ -19,6 +19,5 @@ If you would like to build the chambers but lack the necessary skills or equipme
 
 ## Licenses
 
-The blueprints and diagrams are licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). A copy of the license can be found in [LICENSE_HARDWARE.txt](LICENSE_HARDWARE.txt).
+The resources to build the hardware, that is, the blueprints, schematics, component lists and the arduino and control code, are licensed under a [CC BY-NC 4.0 license](https://creativecommons.org/licenses/by-nc/4.0/).
 
-The code under `arduino/` and `control/` is shared under the [MIT license](https://opensource.org/license/mit/). A copy of the license can also be found in [LICENSE_SOFTWARE.txt](LICENSE_SOFTWARE.txt).
