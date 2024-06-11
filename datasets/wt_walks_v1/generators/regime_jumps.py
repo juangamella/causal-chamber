@@ -42,7 +42,7 @@ if plot:
 OUTPUT_DIR = "./protocols"
 
 # Generation parameters
-N_REGIMES = 16
+N_REGIMES = 32
 N = 10000
 
 # Dictionary with the parameters for the random walk:
@@ -78,19 +78,19 @@ actuator_params = {  # min, max, resolution
 
 intervention_targets = {
     "hatch": [0, 45],
-    "res_in": [0, 1],
-    "res_out": [0, 1],
-    "osr_upwind": [1, 8],
-    "osr_downwind": [1, 8],
-    "osr_ambient": [1, 8],
-    "osr_intake": [1, 8],
+    "res_in": [1, 0],
+    "res_out": [1, 0],
+    "osr_upwind": [8, 1],
+    "osr_downwind": [8, 1],
+    "osr_ambient": [8, 1],
+    "osr_intake": [8, 1],
     "v_in": [1.1, 5],
     "v_out": [1.1, 5],
-    "osr_1": [1, 8],  # TODO: check if these make sense
-    "osr_2": [1, 8],  # TODO: check if these make sense
+    "v_1": [5, 2.56],
+    "v_2": [5, 2.56],
 }
 
-MAX_TARGETS = 3
+MAX_TARGETS = 5
 
 for max_targets in [1, MAX_TARGETS]:
     protocol_name = (
@@ -99,7 +99,7 @@ for max_targets in [1, MAX_TARGETS]:
     print(f"  {protocol_name}")
     filename = f"{OUTPUT_DIR}/{protocol_name}"
 
-    rng = np.random.default_rng(85912309811)
+    rng = np.random.default_rng(13)
 
     # Generate random walks for actuators
     walks = {}
@@ -108,7 +108,7 @@ for max_targets in [1, MAX_TARGETS]:
             N * N_REGIMES,
             lo,
             hi,
-            res * 2,
+            res * 5,
             res,
             random_state=rng.integers(0, 2**32 - 1),
         )
@@ -120,11 +120,17 @@ for max_targets in [1, MAX_TARGETS]:
     # Generate sequence of intervention targets
     regime_targets = [[]]
     for i in range(N_REGIMES - 1):
-        n_targets = rng.integers(0, max_targets, endpoint=True)
+        # Sample number of targets
+        if max_targets == 1:
+            n_targets = rng.choice([0, 1], 1, p=[0.3, 0.7])
+        else:
+            n_targets = rng.integers(0, max_targets, endpoint=True)
+        # Sample target variables
         targets = rng.choice(
             list(intervention_targets.keys()), size=n_targets, replace=False
         )
         regime_targets.append(list(targets))
+        print(list(targets))
 
     print(regime_targets)
 
@@ -132,9 +138,21 @@ for max_targets in [1, MAX_TARGETS]:
     with open(filename, "w") as f:
         # Set all actuators to their reference value
         for sensor, param in sensor_parameters.items():
-            print(f"SET,{sensor},{param}\n", file=f)
-        for i in range(N):
-            for actuator, walk in walks.items():
-                print(f"SET,{actuator},{walk[i]:.2f}", file=f)
-            # Take a measurement
-            print("MSR,1,0", file=f)
+            print(f"SET,{sensor},{param}", file=f)
+
+        # Iterate through regimes
+        for i in range(N_REGIMES):
+            print(f"\n\nSET,flag,{i}", file=f)
+            # Perform regime interventions
+            for t, (v0, v1) in intervention_targets.items():
+                if t in regime_targets[i]:
+                    print(f"SET,{t},{v1}", file=f)
+                else:
+                    print(f"SET,{t},{v0}", file=f)
+            # Run actuator walks and take measurements
+            print("", file=f)
+            for j in range(i * N, (i + 1) * N):
+                for actuator, walk in walks.items():
+                    print(f"SET,{actuator},{walk[j]:.2f}", file=f)
+                # Take a measurement
+                print("MSR,1,0", file=f)
