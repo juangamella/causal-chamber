@@ -17,7 +17,7 @@ If you use any of the datasets or source code in your work, please consider citi
 
 | Link                                                                                          | MD5 Checksum                     |
 |:---------------------------------------------------------------------------------------------:|:--------------------------------:|
-| [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/wt_walks_v1.zip) | 70460483f6002003f7588deb05f0ec16 |
+| [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/wt_walks_v1.zip) | ac7ada075c905007e34079494c62db9f |
 
 You can also import the dataset directly into your Python code with the [`causalchamber`](https://pypi.org/project/causalchamber/) package. Install it using pip, e.g.
 
@@ -68,6 +68,11 @@ Below we plot some variable trajectories from the regime\_jumps\_single experime
 | v1.0            | 15.04.2024 | Initial release of the dataset. |
 | v1.1            | 17.06.2024 | Added new regime\_jumps\_{single,multi} experiments. |
 
+![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/regime_jumps_single_1.png)
+![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/regime_jumps_single_5.png)
+![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/regime_jumps_single_27.png)
+![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/regime_jumps_single_31.png)
+![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/regime_jumps_single_3.png) 
 
 ## Compiling the Experiment Protocols
 
