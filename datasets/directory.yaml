@@ -9,7 +9,7 @@ datasets:
     chamber: "wt"
     image: False
     url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/wt_walks_v1.zip"
-    md5: "70460483f6002003f7588deb05f0ec16"
+    md5: "ac7ada075c905007e34079494c62db9f"
   lt_camera_walks_v1:
     chamber: "lt"
     image: True

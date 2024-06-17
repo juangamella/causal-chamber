@@ -92,14 +92,14 @@ intervention_targets = {
 
 MAX_TARGETS = 5
 
+rng = np.random.default_rng(13)
+
 for max_targets in [1, MAX_TARGETS]:
     protocol_name = (
         "regime_jumps_single.txt" if max_targets == 1 else "regime_jumps_multi.txt"
     )
     print(f"  {protocol_name}")
     filename = f"{OUTPUT_DIR}/{protocol_name}"
-
-    rng = np.random.default_rng(13)
 
     # Generate random walks for actuators
     walks = {}
