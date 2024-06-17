@@ -54,10 +54,14 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 |:----------------------:|:---------:|:------------|
 |   actuators\_random\_walk\_seed_*  |    [`generators/actuators_random_walk.py`](wt_walks_v1/generators/actuators_random_walk.py) | Actuators variables ($L_\text{in}, L_\text{out}, H, A_1, A_2$) follow independent random walks while sensor parameters are fixed. We collect $N=10^4$ measurements and repeat for 10 random seeds. |
 |   loads\_hatch\_mix\_slow\_run\_* <br>loads\_hatch\_mix\_fast\_run\_*  |    [`generators/loads_hatch_mix.py`](wt_walks_v1/generators/loads_hatch_mix.py) | $L_\text{in}, L_\text{out}, H$ follow a sinusoid and square waves, respectively. `_slow` and `_fast` indicate the frequency of the wave. We collect $N=10^4$ measurements. We repeat the experiment a total of 5 runs. |
+| regime\_jumps\_single | [`generators/regime_jumps.py`](wt_walks_v1/generators/regime_jumps.py) | The actuators $L_\text{in}, L_\text{out}, A_1,$ and $A_2$ follow independent random walks for a total of $N=320$K observations. The experiment is divided into 32 regimes of 10K observations each. In each regime, we perform no intervention (with probability 0.3), or a single-target intervention (prob. 0.7) on a variable chosen at random from $\{H,T_\text{in},T_\text{out},O_\text{up},O_\text{dw},O_\text{amb},O_\text{int},R_\text{in},R_\text{out},R_1,R_2,
+\}$. At the end of the regime the target is returned to its _base_ value, i.e., its value in the first regime (first 10K observations), which contains no interventions and serves as reference. The regimes are identified by increasing numbers in the `flag` column. The actual targets for each environment can be found in the file [regimes_targets.py](wt_walks_v1/regime_targets.py). Below, we plot some examples of variable trajectories and how they are affected by regime transitions. |
+| regime\_jumps\_single | [`generators/regime_jumps.py`](wt_walks_v1/generators/regime_jumps.py) | The actuators $L_\text{in}, L_\text{out}, A_1,$ and $A_2$ follow independent random walks for a total of $N=320$K observations. The experiment is divided into 32 regimes of 10K observations each. In each regime, we perform a multiple-target intervention variables chosen at random from $\{H,T_\text{in},T_\text{out},O_\text{up},O_\text{dw},O_\text{amb},O_\text{int},R_\text{in},R_\text{out},R_1,R_2,
+\}$. The size of the intervention is sampled at random from $0,\ldots,5$, that is, some regimes may not contain any interventions. At the end of the regime the targets are returned to their _base_ values, i.e., their value in the first regime (first 10K observations), which contains no interventions and serves as reference. The regimes are identified by increasing numbers in the `flag` column. The actual targets for each environment can be found in the file [regimes_targets.py](wt_walks_v1/regime_targets.py). Below, we plot some examples of variable trajectories and how they are affected by regime transitions. |
 
 ## Visualization
 
-Here are some plots from the regime\_jumps\_single experiment, showing the transitions between regimes and how the relationship between an effect and its causes is affected by the intervention on some third variable. The ground truth graph can be found in Figure 3 of the manuscript, and a detailed description of the variables and the causal effects can be found in Appendices II and III, respectively.
+Below we plot some variable trajectories from the regime\_jumps\_single experiment, showing the transitions between regimes and how the relationship between an effect and its causes is affected by the intervention on some third variable. The ground-truth graph can be found in Figure 3 of the [original paper](https://arxiv.org/pdf/2404.11341.pdf), and a detailed description of the variables and the causal effects can be found in [Appendices II and III](https://arxiv.org/pdf/2404.11341.pdf), respectively.
 
 ![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/regime_jumps_single_1.png)
 ![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/regime_jumps_single_5.png)
@@ -71,7 +75,7 @@ Here are some plots from the regime\_jumps\_single experiment, showing the trans
 | Dataset version | Date       | Description                     |
 |:---------------:|:----------:|:-------------------------------:|
 | v1.0            | 15.04.2024 | Initial release of the dataset. |
-| v1.1            | 17.06.2024 | Added new regime\_jumps\_* experiments. |
+| v1.1            | 17.06.2024 | Added new regime\_jumps\_{single,multi} experiments. |
 
 
 ## Compiling the Experiment Protocols
