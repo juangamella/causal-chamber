@@ -59,7 +59,7 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 
 ## Visualization
 
-Below we plot some variable trajectories from the regime\_jumps\_single experiment, showing the transitions between regimes and how the relationship between an effect and its causes is affected by the intervention on some third variable. The [ground-truth graph](https://github.com/juangamella/causal-chamber/tree/feature/wt_walks_regimes?tab=readme-ov-file#causal-ground-truth-graphs) can be found in Figure 3 of the [original paper](https://arxiv.org/pdf/2404.11341.pdf), and a detailed description of the variables and the causal effects can be found in [Appendices II and III](https://arxiv.org/pdf/2404.11341.pdf), respectively.
+Below we plot some variable trajectories from the regime\_jumps\_single experiment, showing the transitions between regimes and how the relationship between an effect and its causes is affected by the intervention on some third variable. The [ground-truth graph](https://github.com/juangamella/causal-chamber/tree/main?tab=readme-ov-file#causal-ground-truth-graphs) can be found in Figure 3 of the [original paper](https://arxiv.org/pdf/2404.11341.pdf), and a detailed description of the variables and the causal effects can be found in [Appendices II and III](https://arxiv.org/pdf/2404.11341.pdf), respectively.
 
 ![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/regime_jumps_single_1.png)
 ![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/regime_jumps_single_5.png)
