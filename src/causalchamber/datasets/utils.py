@@ -21,7 +21,9 @@
 # SOFTWARE.
 
 
-"""
+"""This module contains helper functions, e.g., to download and
+extract .zip files and check their MD5 checksums.
+
 """
 
 import numpy as np
@@ -41,17 +43,20 @@ def download_and_extract(
     checksum=None,
 ):
     """
-
     Parameters
     ----------
     url : string
-    local_dir : string
+        The download URL.
+    root : string
+        The path to the directory on the local computer, where the file will be downloaded and extrated.
+    checksum : string or NoneType, default=None
+        The expected MD5 checksum of the downloaded file, which will
+        be checked against its actual checksum. If `None`, the
+        checksum is not checked.
 
     Returns
     -------
-    curve_files : list of string
-        A list with the paths to all available torque-curve files, to the load e.g. with
-        pandas.read_csv.
+    None
 
     """
     local_zipfile = "causal_chamber_" + hashlib.md5(url.encode()).hexdigest() + ".zip"
@@ -76,6 +81,7 @@ def download_and_extract(
 
 
 def _download(url, output_path):
+    """Function to actually download the file from the given URL into the given output_path."""
     print(f'Downloading dataset from "{url}" into "{output_path}"\n')
     response = requests.get(url, stream=True)
     total_size_in_bytes = int(response.headers.get("content-length", 0))
@@ -100,7 +106,7 @@ def _unzip(path, output_dir):
 
 
 def _compute_md5(path, checksum):
-    """Verify the MD5 checksum of a file at the given path"""
+    """Verify the MD5 checksum of a file at the given path."""
     hasher = hashlib.md5()
     with open(path, "rb") as f:
         data = f.read()
