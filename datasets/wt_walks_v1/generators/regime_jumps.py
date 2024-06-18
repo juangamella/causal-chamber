@@ -130,9 +130,8 @@ for max_targets in [1, MAX_TARGETS]:
             list(intervention_targets.keys()), size=n_targets, replace=False
         )
         regime_targets.append(list(targets))
-        print(list(targets))
 
-    print(regime_targets)
+    # print(regime_targets)
 
     # Write protocol
     with open(filename, "w") as f:
