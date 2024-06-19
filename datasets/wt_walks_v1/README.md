@@ -17,7 +17,7 @@ If you use any of the datasets or source code in your work, please consider citi
 
 | Link                                                                                          | MD5 Checksum                     |
 |:---------------------------------------------------------------------------------------------:|:--------------------------------:|
-| [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/wt_walks_v1.zip) | 70460483f6002003f7588deb05f0ec16 |
+| [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/wt_walks_v1.zip) | 19bb4e92cbe0b8dff49299b9b509ac36 |
 
 You can also import the dataset directly into your Python code with the [`causalchamber`](https://pypi.org/project/causalchamber/) package. Install it using pip, e.g.
 
@@ -46,7 +46,7 @@ See the table [below](#dataset-description) for all the available experiments an
 |:-----------:|:-------------:|
 | Wind tunnel | standard      |
 
-The manipulable variables of the wind tunnel are set according to different time series: either deterministic (e.g., sinusoid, sawtooth or square waves in the `actuator_mix` experiment) or stochastic, e.g., following a random walk. After each step, a measurement is collected from the chamber. The dataset is used in the causal discovery and ICA case studies of the original [paper](https://arxiv.org/pdf/2404.11341.pdf) (tasks a3 and d2 in Fig. 5 and 6, respectively).
+The dataset contains time-series data collected from the wind tunnel. In each experiment, the manipulable variables are set according to different time series, and a measurement is collected from the chamber after each step. Some of the experiments are used in the [causal discovery](https://github.com/juangamella/causal-chamber-paper/blob/main/case_studies/causal_discovery_time.ipynb) and [ICA](https://github.com/juangamella/causal-chamber-paper/blob/main/case_studies/ica.ipynb) case studies of the original [paper](https://arxiv.org/pdf/2404.11341.pdf) (tasks a3 and d2 in Fig. 5 and 6, respectively).
 
 The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](https://arxiv.org/pdf/2404.11341.pdf) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
 
@@ -54,17 +54,29 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 |:----------------------:|:---------:|:------------|
 |   actuators\_random\_walk\_seed_*  |    [`generators/actuators_random_walk.py`](wt_walks_v1/generators/actuators_random_walk.py) | Actuators variables ($L_\text{in}, L_\text{out}, H, A_1, A_2$) follow independent random walks while sensor parameters are fixed. We collect $N=10^4$ measurements and repeat for 10 random seeds. |
 |   loads\_hatch\_mix\_slow\_run\_* <br>loads\_hatch\_mix\_fast\_run\_*  |    [`generators/loads_hatch_mix.py`](wt_walks_v1/generators/loads_hatch_mix.py) | $L_\text{in}, L_\text{out}, H$ follow a sinusoid and square waves, respectively. `_slow` and `_fast` indicate the frequency of the wave. We collect $N=10^4$ measurements. We repeat the experiment a total of 5 runs. |
+| regime\_jumps\_single | [`generators/regime_jumps.py`](wt_walks_v1/generators/regime_jumps.py) | We collect 320K observations where the actuators $L_\text{in}, L_\text{out}, A_1,$ and $A_2$ follow independent random walks. Every 10K observations we enter a new regime where we perform a single-target intervention on other variables of the chamber, for a total of 32 regimes. In each regime, we perform either no intervention (with probability 0.3) or a single-target intervention (prob. 0.7) on a variable chosen at random from $\\{H,T_\text{in},T_\text{out},O_\text{up},O_\text{dw},O_\text{amb},O_\text{int},R_\text{in},R_\text{out},R_1,R_2\\}$. At the end of the regime the target is returned to its _base_ value, i.e., its value in the first regime (first 10K observations), which contains no interventions and serves as reference. The regimes are identified by increasing numbers in the `flag` column. The actual targets for each regime can be found in the file [regimes_targets.py](wt_walks_v1/regime_targets.py). Below, we plot some examples of variable trajectories as they are affected by regime transitions. |
+| regime\_jumps\_multi | [`generators/regime_jumps.py`](wt_walks_v1/generators/regime_jumps.py) |  We collect 320K observations where the actuators $L_\text{in}, L_\text{out}, A_1,$ and $A_2$ follow independent random walks. Every 10K observations we enter a new regime where we perform a multiple-target intervention on other variables of the chamber, for a total of 32 regimes. In each regime, we choose the targets at random from $\\{H,T_\text{in},T_\text{out},O_\text{up},O_\text{dw},O_\text{amb},O_\text{int},R_\text{in},R_\text{out},R_1,R_2\\}$; the number of targets is sampled at random from $0,\ldots,5$, that is, some regimes may not contain any interventions. At the end of the regime the targets are returned to their _base_ values, i.e., their value in the first regime (first 10K observations), which contains no interventions and serves as reference. The regimes are identified by increasing numbers in the `flag` column. The actual targets for each regime can be found in the file [regimes_targets.py](wt_walks_v1/regimes_targets.py). |
+
+## Visualization
+
+Below we plot some variable trajectories from the regime\_jumps\_single experiment, showing the transitions between regimes and how the relationship between an effect and its causes is affected by the intervention on some third variable. The ground-truth graph can be found in Figure 3 of the [original paper](https://arxiv.org/pdf/2404.11341.pdf), and a detailed description of the variables and the causal effects can be found in [Appendices II and III](https://arxiv.org/pdf/2404.11341.pdf), respectively.
+
+![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/plot_regime_jumps_single_1.png)
+![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/plot_regime_jumps_single_5.png)
+![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/plot_regime_jumps_single_27.png)
+![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/plot_regime_jumps_single_31.png)
+![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/plot_regime_jumps_single_3.png) 
 
 ## Changelog
 
 | Dataset version | Date       | Description                     |
 |:---------------:|:----------:|:-------------------------------:|
 | v1.0            | 15.04.2024 | Initial release of the dataset. |
+| v1.1            | 19.06.2024 | Added new regime\_jumps\_{single,multi} experiments. |
 
 ## Compiling the Experiment Protocols
 
 You can generate the experiment protocols by running `make protocols` in a make-capable machine. This will execute the Python scripts in `generators/` and store the resulting protocols in `protocols/`. The file [`generators/requirements.txt`](generators/requirements.txt) contains the dependencies needed to run the scripts.
-
 
 ## Licenses
 
