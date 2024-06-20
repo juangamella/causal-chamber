@@ -67,8 +67,8 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 | osr_1_weak<br>osr_2_weak<br>osr_c_weak | [`generators/uniform.py`](lt_interventions_standard_v1/generators/uniform.py) | We set $O_1, O_2, O_C = 2$ and sample all other manipulable variables as in `uniform_reference`. We collect $N = 1000$ measurements. |
 | osr_1_mid<br>osr_2_mid<br>osr_c_mid | [`generators/uniform.py`](lt_interventions_standard_v1/generators/uniform.py) | We set $O_1, O_2, O_C = 4$ and sample all other manipulable variables as in `uniform_reference`. We collect $N = 1000$ measurements. |
 | osr_1_strong<br>osr_2_strong<br>osr_c_strong | [`generators/uniform.py`](lt_interventions_standard_v1/generators/uniform.py) | We set $O_1, O_2, O_C = 8$ and sample all other manipulable variables as in `uniform_reference`. We collect $N = 1000$ measurements. |
-| v_1_mid<br>v_2_mid<br>v_c_mid | [`generators/uniform.py`](lt_interventions_standard_v1/generators/uniform.py) | We set $R_1, R_2,$ or $R_C = 2.56$ and sample all other manipulable variables as in `uniform_reference`. We collect $N = 1000$ measurements. |
-| v_1_strong<br>v_2_strong<br>v_c_strong | [`generators/uniform.py`](lt_interventions_standard_v1/generators/uniform.py) | We set $R_1, R_2$ or $R_C = 1.1$ and sample all other manipulable variables as in `uniform_reference`. We collect $N = 1000$ measurements. |
+| uniform_v_angle_1_mid<br>uniform_v_angle_2_mid<br>v_c_mid | [`generators/uniform.py`](lt_interventions_standard_v1/generators/uniform.py) | We set $R_1, R_2,$ or $R_C = 2.56$ and sample all other manipulable variables as in `uniform_reference`. We collect $N = 1000$ measurements. |
+| uniform_v_angle_1_strong<br>uniform_v_angle_2_strong<br>v_c_strong | [`generators/uniform.py`](lt_interventions_standard_v1/generators/uniform.py) | We set $R_1, R_2$ or $R_C = 1.1$ and sample all other manipulable variables as in `uniform_reference`. We collect $N = 1000$ measurements. |
 
 
 ## Changelog
