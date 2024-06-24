@@ -19,5 +19,5 @@ If you would like to build the chambers but lack the necessary skills, time, or 
 
 ## Licenses
 
-The resources to build the hardware, that is, the blueprints, schematics, component lists and the arduino and control code, are licensed under a [CC BY-NC 4.0 license](https://creativecommons.org/licenses/by-nc/4.0/). This means you are free to use, share and modify the hardware for non-commercial purposes only, on the condition that you give appropriate credit and communicate changes.
+The resources to build the hardware, that is, the blueprints, schematics, component lists and the arduino and control code, are licensed under a [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
