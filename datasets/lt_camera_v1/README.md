@@ -63,7 +63,7 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|
-| ap\_1.8\_iso\_500.0\_ss\_0.005<br>ap\_1.8\_iso\_1000.0\_ss\_0.005<br>ap\_1.8\_iso\_500.0\_ss\_0.001<br>ap\_8.0\_iso\_500.0\_ss\_0.005 | [`generators/random_actuators.py`](lt_camera_v1/generators/random_actuators.py)| We set the camera parameters ($\text{Ap}, \text{ISO}, T_\text{Im}$) to the values given in the experiment name (ap, iso, ss, respectively). Then, for a total of $N=10^4$ times, we sample $R,G,B \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{0,\ldots,255\\})$ and $\theta_1, \theta_2 \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{-180,-179.9,\ldots,180\\})$, and take a measurement, producing an image. |
+| uniform\_ap\_1.8\_iso\_500.0\_ss\_0.005<br>uniform\_ap\_1.8\_iso\_1000.0\_ss\_0.005<br>uniform\_ap\_1.8\_iso\_500.0\_ss\_0.001<br>uniform\_ap\_8.0\_iso\_500.0\_ss\_0.005 | [`generators/random_actuators.py`](lt_camera_v1/generators/random_actuators.py)| We set the camera parameters ($\text{Ap}, \text{ISO}, T_\text{Im}$) to the values given in the experiment name (ap, iso, ss, respectively). Then, for a total of $N=10^4$ times, we sample $R,G,B \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{0,\ldots,255\\})$ and $\theta_1, \theta_2 \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{-180,-179.9,\ldots,180\\})$, and take a measurement, producing an image. |
 
 
 ## Changelog

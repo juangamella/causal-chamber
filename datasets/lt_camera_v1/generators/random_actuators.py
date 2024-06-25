@@ -25,10 +25,10 @@ import numpy as np
 """
 Generates the experiment protocols for the experiments:
 
-- ap_1.8_iso_500.0_ss_0.005'
-- ap_1.8_iso_1000.0_ss_0.005'
-- ap_1.8_iso_500.0_ss_0.001'
-- ap_8.0_iso_500.0_ss_0.005'
+- uniform_ap_1.8_iso_500.0_ss_0.005'
+- uniform_ap_1.8_iso_1000.0_ss_0.005'
+- uniform_ap_1.8_iso_500.0_ss_0.001'
+- uniform_ap_8.0_iso_500.0_ss_0.005'
 
 """
 
@@ -107,9 +107,7 @@ settings = [
 count = 0
 for seed, (aperture, iso, shutter_speed) in enumerate(settings):
     rng = np.random.default_rng(seed)
-    protocol_name = (
-        f"ap_{to_float(aperture)}_iso_{to_float(iso)}_ss_{to_float(shutter_speed)}.txt"
-    )
+    protocol_name = f"uniform_ap_{to_float(aperture)}_iso_{to_float(iso)}_ss_{to_float(shutter_speed)}.txt"
     filename = f"{OUTPUT_DIR}/{protocol_name}"
     print(f"  {protocol_name}")
     with open(filename, "w") as f:
