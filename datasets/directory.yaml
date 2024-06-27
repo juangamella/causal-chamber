@@ -89,5 +89,5 @@ datasets:
     chamber: "lt"
     image: True
     url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_camera_v1.zip"
-    md5: "3bf31e36ed8e1cd7e93f2c9b47b0abc9"
+    md5: "ede96517aa8f0177615e8c404573fea1"
 
