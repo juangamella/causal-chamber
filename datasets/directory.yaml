@@ -85,3 +85,9 @@ datasets:
     image: False
     url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/wt_pressure_control_v1.zip"
     md5: "8cb1c9bf19cedc5baea7a9c15e54af6a"
+  lt_camera_v1:
+    chamber: "lt"
+    image: True
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_camera_v1.zip"
+    md5: "ede96517aa8f0177615e8c404573fea1"
+

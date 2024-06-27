@@ -46,6 +46,7 @@ Each dataset below is described in detail in its corresponding page (click the d
 | [wt_pc_validate_v1](datasets/wt_pc_validate_v1/) | Randomized control experiments to validate the causal ground-truth graph of the wind tunnel in its _pressure-control_ configuration (appendix V of the manuscript). | Wind tunnel | pressure-control |
 | [lt_validate_v1](datasets/lt_validate_v1/) | Randomized control experiments to validate the causal ground-truth graphs of the light tunnel in its _standard_ configuration (appendix V of the manuscript). | Light tunnel | standard |
 | [lt_camera_validate_v1](datasets/lt_camera_validate_v1/) | Randomized control experiments to validate the causal ground-truth graphs of the light tunnel in its _camera_ configuration (appendix V of the manuscript). | Light tunnel | standard |
+| [lt_camera_v1](datasets/lt_camera_v1/) | Image datasets where the light-tunnel actuators are sampled from different distributions and structural causal models. | Light tunnel | camera |
 
 ## Downloading the datasets
 
