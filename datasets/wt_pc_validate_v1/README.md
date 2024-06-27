@@ -53,7 +53,7 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|
-| validate\_pressure\_downwind\_loads | [`generators/binary_interventions.py`](wt_pc_validate_v1/generators/binary_interventions.py) | In each experiment we repeatedly set the manipulable variable given in the experiment name to a value picked randomly between two options ($x^A$ or $x^B$), as described in the validation procedure given in appendix V of the [manuscript](https://arxiv.org/pdf/2404.11341.pdf). |
+| validate\_pressure\_downwind\_loads | [`generators/binary_interventions.py`](generators/binary_interventions.py) | In each experiment we repeatedly set the manipulable variable given in the experiment name to a value picked randomly between two options ($x^A$ or $x^B$), as described in the validation procedure given in appendix V of the [manuscript](https://arxiv.org/pdf/2404.11341.pdf). |
 
 ## Changelog
 

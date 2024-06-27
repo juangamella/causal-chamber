@@ -52,7 +52,7 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|
-| validate_aperture<br>validate_blue<br>validate_green<br>validate_iso<br>validate_pol_1<br>validate_pol_2<br>validate_red<br>validate_shutter_speed<br> | [`generators/binary_interventions.py`](lt_camera_validate_v1/generators/binary_interventions.py) | In each experiment we repeatedly set the manipulable variable given in the experiment name to a value picked randomly between two options ($x^A$ or $x^B$), as described in the validation procedure given in appendix V of the [manuscript](https://arxiv.org/pdf/2404.11341.pdf). |
+| validate_aperture<br>validate_blue<br>validate_green<br>validate_iso<br>validate_pol_1<br>validate_pol_2<br>validate_red<br>validate_shutter_speed<br> | [`generators/binary_interventions.py`](generators/binary_interventions.py) | In each experiment we repeatedly set the manipulable variable given in the experiment name to a value picked randomly between two options ($x^A$ or $x^B$), as described in the validation procedure given in appendix V of the [manuscript](https://arxiv.org/pdf/2404.11341.pdf). |
 
 ## Changelog
 

@@ -58,7 +58,7 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 
 | Dataset version | Date       | Description                     |
 |:---------------:|:----------:|:-------------------------------:|
-| TEMPLATE      | [`generators/TEMPLATE.py`](wt_test_v1/generators/TEMPLATE.py) | TEMPLATE |
+| TEMPLATE      | [`generators/TEMPLATE.py`](generators/TEMPLATE.py) | TEMPLATE |
 
 ## Compiling the Experiment Protocols
 

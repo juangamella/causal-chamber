@@ -52,7 +52,7 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|
-|   load\_in\_seed\_*  |    [`generators/load_in.py`](wt_changepoints_v1/generators/load_in.py) | We change the intake fan load $`L_\text{in}`$ at random intervals and to different values, while keeping all other actuators constant. Repeated 10 times with different random seeds. |
+|   load\_in\_seed\_*  |    [`generators/load_in.py`](generators/load_in.py) | We change the intake fan load $`L_\text{in}`$ at random intervals and to different values, while keeping all other actuators constant. Repeated 10 times with different random seeds. |
 
 
 ## Changelog

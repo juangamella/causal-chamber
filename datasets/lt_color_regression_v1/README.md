@@ -68,16 +68,16 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 
 | Dataset version | Date       | Description                     |
 |:---------------:|:----------:|:-------------------------------:|
-| reference | [`generators/color_regression.py`](lt_color_regression_v1/generators/color_regression.py) | We set $\theta_1=\theta_2=0$, $\text{Ap}=1.8$, $\text{ISO}=100$, $T_\text{Im}=1/200$. Then, we sample $R, G, B \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{0,\ldots,128\\})$ and take an image, repeating the process for a total of $N=10000$ observations. |
-| bright_colors | [`generators/color_regression.py`](lt_color_regression_v1/generators/color_regression.py) | Same as the reference experiment, but we sample $R, G, B \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{129,\ldots,255\\})$ |
-| pol_1_45 | [`generators/color_regression.py`](lt_color_regression_v1/generators/color_regression.py) | Same as the reference experiment, but we set $\theta_1 = 45$. |
-| pol_1_90 | [`generators/color_regression.py`](lt_color_regression_v1/generators/color_regression.py) | Same as the reference experiment, but we set $\theta_1 = 90$. |
-| aperture_5.0 | [`generators/color_regression.py`](lt_color_regression_v1/generators/color_regression.py) | Same as the reference experiment, but we set $\text{Ap}=5$. |
-| aperture_11.0 | [`generators/color_regression.py`](lt_color_regression_v1/generators/color_regression.py) | Same as the reference experiment, but we set $\text{Ap}=11$. |
-| shutter_speed_0.002 | [`generators/color_regression.py`](lt_color_regression_v1/generators/color_regression.py) | Same as the reference experiment, but we set $T_\text{Im}=1/500$. |
-| shutter_speed_0.001 | [`generators/color_regression.py`](lt_color_regression_v1/generators/color_regression.py) | Same as the reference experiment, but we set $T_\text{Im}=1/100$. |
-| iso_500.0 | [`generators/color_regression.py`](lt_color_regression_v1/generators/color_regression.py) | Same as the reference experiment, but we set $\text{ISO}=500$. |
-| iso_1000.0 | [`generators/color_regression.py`](lt_color_regression_v1/generators/color_regression.py) | Same as the reference experiment, but we set $\text{ISO}=1000$. |
+| reference | [`generators/color_regression.py`](generators/color_regression.py) | We set $\theta_1=\theta_2=0$, $\text{Ap}=1.8$, $\text{ISO}=100$, $T_\text{Im}=1/200$. Then, we sample $R, G, B \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{0,\ldots,128\\})$ and take an image, repeating the process for a total of $N=10000$ observations. |
+| bright_colors | [`generators/color_regression.py`](generators/color_regression.py) | Same as the reference experiment, but we sample $R, G, B \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{129,\ldots,255\\})$ |
+| pol_1_45 | [`generators/color_regression.py`](generators/color_regression.py) | Same as the reference experiment, but we set $\theta_1 = 45$. |
+| pol_1_90 | [`generators/color_regression.py`](generators/color_regression.py) | Same as the reference experiment, but we set $\theta_1 = 90$. |
+| aperture_5.0 | [`generators/color_regression.py`](generators/color_regression.py) | Same as the reference experiment, but we set $\text{Ap}=5$. |
+| aperture_11.0 | [`generators/color_regression.py`](generators/color_regression.py) | Same as the reference experiment, but we set $\text{Ap}=11$. |
+| shutter_speed_0.002 | [`generators/color_regression.py`](generators/color_regression.py) | Same as the reference experiment, but we set $T_\text{Im}=1/500$. |
+| shutter_speed_0.001 | [`generators/color_regression.py`](generators/color_regression.py) | Same as the reference experiment, but we set $T_\text{Im}=1/100$. |
+| iso_500.0 | [`generators/color_regression.py`](generators/color_regression.py) | Same as the reference experiment, but we set $\text{ISO}=500$. |
+| iso_1000.0 | [`generators/color_regression.py`](generators/color_regression.py) | Same as the reference experiment, but we set $\text{ISO}=1000$. |
 
 ## Compiling the Experiment Protocols
 
