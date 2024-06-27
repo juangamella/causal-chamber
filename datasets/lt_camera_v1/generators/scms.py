@@ -116,6 +116,11 @@ rng_weights = np.random.default_rng(42)
 W = A * rng_weights.uniform(0.5, 1, size=A.shape)
 D = np.eye(p) * rng_weights.uniform(0, 1, size=A.shape)
 
+print("W")
+print(repr(W))
+print("D")
+print(repr(D))
+
 # Normalize W and D so the marginals are always in [0,1]
 norm = np.sum(W + D, axis=0, keepdims=True)
 W /= norm
