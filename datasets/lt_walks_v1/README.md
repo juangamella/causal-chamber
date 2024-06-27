@@ -53,8 +53,8 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|
-| actuators\_white| [`generators/actuators_white.py`](lt_walks_v1/generators/actuators_white.py)| The values of all actuators are sampled uniformly at random before each measurement, i.e., $R,G,B,L_{11},\ldots,L_{32} \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{0,\ldots,255\\})$ and $\theta_1, \theta_2 \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{-90,-89,\ldots,90\\})$. | 
-|   color\_mix  |    [`generators/color_mix.py`](lt_walks_v1/generators/color_mix.py) | We vary the value of $R,G,B$ according to a sine, square and sawtooth wave, respectively. We collect a total of $N=10^4%$ observations. The dataset is used in task d1 of the ICA case study (see [Fig. 6](https://arxiv.org/pdf/2404.11341.pdf)). |
+| actuators\_white| [`generators/actuators_white.py`](generators/actuators_white.py)| The values of all actuators are sampled uniformly at random before each measurement, i.e., $R,G,B,L_{11},\ldots,L_{32} \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{0,\ldots,255\\})$ and $\theta_1, \theta_2 \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{-90,-89,\ldots,90\\})$. | 
+|   color\_mix  |    [`generators/color_mix.py`](generators/color_mix.py) | We vary the value of $R,G,B$ according to a sine, square and sawtooth wave, respectively. We collect a total of $N=10^4%$ observations. The dataset is used in task d1 of the ICA case study (see [Fig. 6](https://arxiv.org/pdf/2404.11341.pdf)). |
 
 
 ## Changelog

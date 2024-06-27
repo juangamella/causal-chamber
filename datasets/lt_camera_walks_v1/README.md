@@ -63,8 +63,8 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|
-|   actuator\_mix  |    [`generators/actuator_mix.py`](lt_camera_walks_v1/generators/actuator_mix.py) | We vary the value of $R,G,B, \theta_1, \theta_2$ following a sine, sawtooth, chirp, triangular and square signal, respectively (see [`scipy.signal`](https://docs.scipy.org/doc/scipy/reference/signal.html#waveforms)). We collect a total of $N=10^4%$ observations. Used in task d3 of the ICA case study (Fig. 6 of the original [paper](https://arxiv.org/pdf/2404.11341.pdf)). |
-|   color\_mix  |    [`generators/color_mix.py`](lt_camera_walks_v1/generators/color_mix.py) | We vary the value of $R,G,B$ following a sine, square, and sawtooth wave, respectively. We collect a total of $N=10^4%$ observations. |
+|   actuator\_mix  |    [`generators/actuator_mix.py`](generators/actuator_mix.py) | We vary the value of $R,G,B, \theta_1, \theta_2$ following a sine, sawtooth, chirp, triangular and square signal, respectively (see [`scipy.signal`](https://docs.scipy.org/doc/scipy/reference/signal.html#waveforms)). We collect a total of $N=10^4%$ observations. Used in task d3 of the ICA case study (Fig. 6 of the original [paper](https://arxiv.org/pdf/2404.11341.pdf)). |
+|   color\_mix  |    [`generators/color_mix.py`](generators/color_mix.py) | We vary the value of $R,G,B$ following a sine, square, and sawtooth wave, respectively. We collect a total of $N=10^4%$ observations. |
 
 ## Changelog
 

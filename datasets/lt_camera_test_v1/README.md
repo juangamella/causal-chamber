@@ -65,9 +65,9 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|
-| palette      | [`generators/palette.py`](lt_camera_test_v1/generators/palette.py) | Capture images of 14 different light-source colors ($R,G,B$) for combinations of the camera parameters $(\text{Ap}, \text{ISO}, T_\text{Im}) \in \\{1.8, 11\\} \times \\{100,1000\\} \times \\{0.005, 0.001\\}.$ |
-| polarizer\_effect\_bright<br>polarizer\_effect\_dark      | [`generators/polarizer_effect.py`](lt_camera_test_v1/generators/polarizer_effect.py) | Capture images of primary light-source colors and their combinations under different positions of the polarizers, in a high-exposure setting (bright, $\text{Ap}=1.8, \text{ISO}=1000, T_\text{Im}=0.005$) and a low-exposure setting (dark, $\text{Ap}=22, \text{ISO}=100, T_\text{Im}=0.001$).|
-| pure\_colors\_bright<br>pure\_colors\_dark      | [`generators/pure_colors.py`](lt_camera_test_v1/generators/pure_colors.py) | Capture images of pure red $(R=255, G=B=0)$, green $(R=B=0, G=255)$ and blue $(R=G=0, B=255)$ under aligned polarizers, in a high-exposure setting (bright, $\text{Ap}=1.8, \text{ISO}=1000, T_\text{Im}=0.005$) and a low-exposure setting (dark, $\text{Ap}=22, \text{ISO}=100, T_\text{Im}=0.001$).|
+| palette      | [`generators/palette.py`](generators/palette.py) | Capture images of 14 different light-source colors ($R,G,B$) for combinations of the camera parameters $(\text{Ap}, \text{ISO}, T_\text{Im}) \in \\{1.8, 11\\} \times \\{100,1000\\} \times \\{0.005, 0.001\\}.$ |
+| polarizer\_effect\_bright<br>polarizer\_effect\_dark      | [`generators/polarizer_effect.py`](generators/polarizer_effect.py) | Capture images of primary light-source colors and their combinations under different positions of the polarizers, in a high-exposure setting (bright, $\text{Ap}=1.8, \text{ISO}=1000, T_\text{Im}=0.005$) and a low-exposure setting (dark, $\text{Ap}=22, \text{ISO}=100, T_\text{Im}=0.001$).|
+| pure\_colors\_bright<br>pure\_colors\_dark      | [`generators/pure_colors.py`](generators/pure_colors.py) | Capture images of pure red $(R=255, G=B=0)$, green $(R=B=0, G=255)$ and blue $(R=G=0, B=255)$ under aligned polarizers, in a high-exposure setting (bright, $\text{Ap}=1.8, \text{ISO}=1000, T_\text{Im}=0.005$) and a low-exposure setting (dark, $\text{Ap}=22, \text{ISO}=100, T_\text{Im}=0.001$).|
 
 ## Changelog
 

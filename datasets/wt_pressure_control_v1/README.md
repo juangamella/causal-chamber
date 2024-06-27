@@ -52,7 +52,7 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 
 | Experiment | Generator                                                     | Description |
 |:----------:|:-------------------------------------------------------------:|:------------|
-| hatch\_0   | [`generators/hatch.py`](wt_pressure_control_v1/generators/hatch.py) | The hatch is closed ($H=0$) and all other exogenous, manipulable variables of the system (i.e. all actuators and sensor parameters except $L_\text{in}, L_\text{out}$) are kept at a constant value while $N=10000$  measurements are collected. The control target for the pressure of the downwind barometer ($`\tilde{P}_\text{dw}`$) corresponds to the pressure measured when powering up the chamber. |
+| hatch\_0   | [`generators/hatch.py`](generators/hatch.py) | The hatch is closed ($H=0$) and all other exogenous, manipulable variables of the system (i.e. all actuators and sensor parameters except $L_\text{in}, L_\text{out}$) are kept at a constant value while $N=10000$  measurements are collected. The control target for the pressure of the downwind barometer ($`\tilde{P}_\text{dw}`$) corresponds to the pressure measured when powering up the chamber. |
 
 ## Changelog
 
