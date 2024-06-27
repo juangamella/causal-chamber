@@ -57,13 +57,17 @@ experiment.available_sizes()
 |:------------:|:-------------:|
 | Light tunnel | camera |
 
-The repository contains experiments where the chamber actuators $R,G,B,\theta_1,\theta_2$ are set independently and uniformly at random and images are taken for each setting. We repeat the experiment with different random seeds (for the actuators) and changes to the camera parameters (aperture, sensor gain and shutter speed).
+The repository contains experiments where the chamber actuators $R,G,B,\theta_1,\theta_2$ are set following different distributions and an image is taken for each setting. Some experiments are repeated under different configurations of the camera parameters (aperture, sensor gain and shutter speed).
 
 The file [variables.csv](variables.csv) contains a brief description of each variable (column) in the `.csv` files; see appendix II of the [manuscript](https://arxiv.org/pdf/2404.11341.pdf) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|
 | uniform\_ap\_1.8\_iso\_500.0\_ss\_0.005<br>uniform\_ap\_1.8\_iso\_1000.0\_ss\_0.005<br>uniform\_ap\_1.8\_iso\_500.0\_ss\_0.001<br>uniform\_ap\_8.0\_iso\_500.0\_ss\_0.005 | [`generators/random_actuators.py`](lt_camera_v1/generators/random_actuators.py)| We set the camera parameters ($\text{Ap}, \text{ISO}, T_\text{Im}$) to the values given in the experiment name (ap, iso, ss, respectively). Then, for a total of $N=10^4$ times, we sample $R,G,B \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{0,\ldots,255\\})$ and $\theta_1, \theta_2 \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{-180,-179.9,\ldots,180\\})$, and take a measurement, producing an image. |
+| scm_1_reference | [`generators/scms.py`](lt_camera_v1/generators/scms.py)| We set the camera parameters to $\text{Ap} = 1.8, \text{ISO} = 500, T_\text{Im}=0.005$ and sample $Z := (R, G, B, \theta_1, \theta_2)^T$ following a structural causal model, given by $Z := S\tilde{Z} + l \epsilon$ where $S := $ and $$\begin{pmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{pmatrix}$$  |
 
 
 ## Changelog
