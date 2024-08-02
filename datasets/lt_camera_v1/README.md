@@ -79,7 +79,7 @@ Below we plot the actuator distributions for the _betab\_ap\_1.8\_iso\_500.0\_ss
 | Dataset version | Date       | Description                     |
 |:---------------:|:----------:|:-------------------------------:|
 | v1.0            | 27.06.2024 | Initial release of the dataset. |
-| v1.1            | 02.08.2024 | New _betab\_*_ experiments.     |
+| v1.1            | 02.08.2024 | New _betab\_ap\_1.8\_iso\_500.0\_ss\_0.005_ experiment. |
 
 ## Compiling the Experiment Protocols
 
