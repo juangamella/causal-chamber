@@ -54,12 +54,10 @@ OUTPUT_DIR = "./protocols"
 # Generation parameters
 N = 1000
 
-# Dictionary with the parameters for the random walk:
-#   - min, max possible values
-#   - max step size
-#   - resolution (e.g., 1 for ints)
 
 sensor_parameters = {
+    "pot_1": 0,
+    "pot_2": 0,
     "v_1": 5,
     "osr_1": 1,
     "v_2": 5,
@@ -81,12 +79,12 @@ sensor_parameters = {
 actuator_params = {  # min /max
     "load_in": (0, 1),
     "load_out": (0, 1),
-    "pot_1": (0, 255),
-    "pot_2": (0, 255),
+    "hatch": (0, 45),
+    # "pot_1": (0, 255),
+    # "pot_2": (0, 255),
 }
 
 intervention_targets = {
-    "hatch": [0, 45],
     "res_in": [1, 0],
     "res_out": [1, 0],
     "osr_upwind": [8, 1],
@@ -101,7 +99,7 @@ intervention_targets = {
 
 rng = np.random.default_rng(13)
 
-DELAY = 500
+DELAY = 700
 
 protocol_name = "actuators_white_single.txt"
 print(f"  {protocol_name}")
@@ -151,12 +149,13 @@ with open(filename, "w") as f:
         # Set actuators
         print("", file=f)
         for actuator, signal in signals.items():
-            if actuator in ["load_in", "load_out"]:
+            if actuator in ["load_in", "load_out", "hatch"]:
                 print(f"SET,{actuator},{signal[i]:.2f}", file=f)
             else:
                 print(f"SET,{actuator},{int(signal[i])}", file=f)
         # Take measurement
-        print(f"MSR,1,{DELAY}", file=f)
+        print(f"WAIT,{DELAY}",file=f)
+        print("MSR,1,0", file=f)
 
     # -------------------------
     # Shifted actuators
@@ -190,12 +189,13 @@ with open(filename, "w") as f:
             # Set actuators
             print("", file=f)
             for actuator, signal in signals.items():
-                if actuator in ["load_in", "load_out"]:
+                if actuator in ["load_in", "load_out", "hatch"]:
                     print(f"SET,{actuator},{signal[i]:.2f}", file=f)
                 else:
                     print(f"SET,{actuator},{int(signal[i])}", file=f)
             # Take measurement
-            print(f"MSR,1,{DELAY}", file=f)
+            print(f"WAIT,{DELAY}",file=f)
+            print("MSR,1,0", file=f)
 
     # -------------------------
     # Binary interventions on hatch and sensor parameters
@@ -228,9 +228,10 @@ with open(filename, "w") as f:
             # Set actuators
             print("", file=f)
             for actuator, signal in signals.items():
-                if actuator in ["load_in", "load_out"]:
+                if actuator in ["load_in", "load_out", "hatch"]:
                     print(f"SET,{actuator},{signal[i]:.2f}", file=f)
                 else:
                     print(f"SET,{actuator},{int(signal[i])}", file=f)
             # Take measurement
-            print(f"MSR,1,{DELAY}", file=f)
+            print(f"WAIT,{DELAY}",file=f)
+            print("MSR,1,0", file=f)
