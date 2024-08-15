@@ -156,7 +156,7 @@ print(repr(stds))
 # ----------------------------
 
 # Number of observations per intervention
-N = int(5e3)
+N = int(4e3)
 
 # Intervention targets
 targets = [None, ("red", 0), ("green", 1), ("blue", 2), ("pol_1", 3), ("pol_2", 4)]
