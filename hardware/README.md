@@ -2,7 +2,7 @@
 
 Here you can find the resources to build the wind tunnel and light tunnel described in the original [paper](https://arxiv.org/pdf/2404.11341.pdf).
 
-**Note**: We are still working on the blueprints, electronics diagrams and component lists for the chamber prototypes described in the paper. Please check again soon or shoot us (Juan) an email!
+**Note**: We are still working on documenting the blueprints, electronics diagrams and component lists. Please check again soon or shoot us (Juan) an email!
 
 ## Disclaimer
 
