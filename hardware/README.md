@@ -1,15 +1,8 @@
 # Building the Chambers
 
-Here you can find the resources to build the wind tunnel and light tunnel described in the original [paper](https://arxiv.org/pdf/2404.11341.pdf). In particular,
+Here you can find the resources to build the wind tunnel and light tunnel described in the original [paper](https://arxiv.org/pdf/2404.11341.pdf).
 
-- [`blueprints/`](blueprints/) contains the laser cutter designs for the framework and enclosures of the chambers.
-- [`electronics/`](blueprints/) contains the schematics for the electronic components of the chambers.
-- [`component_list.md`](component_list.md) contains a list of all necessary components to build each chamber, including all the sensors and the camera.
-- [`arduino/`](arduino/) contains the code that runs on the control computers aboard the chambers, including all necessary libraries.
-- [`control/`](control/) contains the Python application to send commands and receive data from the chambers.
-- [`datasheets/`](datasheets/) contains the datasheets for all components, outlined in appendix VI of the original [paper](https://arxiv.org/pdf/2404.11341.pdf).
-
-**Note**: We are still working on the blueprints, electronics diagrams and component lists for the latest version of the chambers. Please check again soon or shoot us (Juan) an email!
+**Note**: We are still working on the blueprints, electronics diagrams and component lists for the chamber prototypes described in the paper. Please check again soon or shoot us (Juan) an email!
 
 ## Disclaimer
 
