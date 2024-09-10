@@ -26,7 +26,7 @@ Generates the experiment protocols for the experiments:
 
 - actuators_white
 
-Sample each actuator $(R,G,B,\theta_1,\theta_2)$ uniformly at random from its full range of values, and take a measurement, while keeping all sensor parameters constant. Repeat $N=32000$ times.
+Sample each actuator $(R,G,B,\theta_1,\theta_2)$ uniformly at random from its full range of values, and take a measurement, while keeping all sensor parameters constant. Repeat $N=20000$ times.
 
 """
 
@@ -36,7 +36,7 @@ import numpy as np
 OUTPUT_DIR = "./protocols"
 
 # Generation parameters
-N = 30000
+N = 20000
 
 sensor_parameters = {
     "diode_ir_1": 2,
