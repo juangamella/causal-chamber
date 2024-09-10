@@ -34,7 +34,7 @@ import numpy as np
 OUTPUT_DIR = "./protocols"
 
 # Generation parameters
-N = int(2e5)  # 200K
+N = int(1e5)  # 100K
 
 # Dictionary with the exogenous variables and their zero-levels
 variable_ranges = {
