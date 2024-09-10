@@ -20,23 +20,20 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-"""
-Matrices for SCM 1.
-"""
-
 import numpy as np
 
-# Note: W[j,i] != 0 encodes the edge i -> j
+# Weights matrix
 W = np.array(
     [
         [0.0, 0.0, 0.0, 0.0, 0.0],
-        [0.98781118, 0.0, 0.0, 0.0, 0.72519297],
-        [0.0, 0.96338249, 0.0, 0.0, 0.7217071],
-        [0.61361936, 0.0, 0.0, 0.0, 0.0],
+        [0.71943922, 0.0, 0.0, 0.0, 0.67726298],
+        [0.0, 0.89303215, 0.0, 0.0, 0.98534901],
+        [0.84868401, 0.0, 0.0, 0.0, 0.0],
         [0.0, 0.0, 0.0, 0.0, 0.0],
     ]
 )
 
+# Noise scale
 D = np.array(
     [
         [0.19463871, 0.0, 0.0, 0.0, 0.0],
