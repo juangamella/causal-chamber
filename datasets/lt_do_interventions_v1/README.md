@@ -52,15 +52,17 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 
 | Experiment | Generator | Description |
 |:----------------------:|:---------:|:------------|
-| v1.0            | TEMPLATE | Initial release of the dataset. |
+| uniform\_ref\_low      | [`generators/TEMPLATE.py`](generators/TEMPLATE.py) | TEMPLATE |
+| uniform\_ref\_full      | [`generators/TEMPLATE.py`](generators/TEMPLATE.py) | TEMPLATE |
+| uniform\_do\_red | 
+
 
 ## Changelog
 
 | Dataset version | Date       | Description                     |
 |:---------------:|:----------:|:-------------------------------:|
-| uniform\_ref\_low      | [`generators/TEMPLATE.py`](generators/TEMPLATE.py) | TEMPLATE |
-| uniform\_ref\_full      | [`generators/TEMPLATE.py`](generators/TEMPLATE.py) | TEMPLATE |
-| uniform\_do\_red | 
+| v1.0            | TEMPLATE | Initial release of the dataset. |
+
 
 ## Compiling the Experiment Protocols
 
