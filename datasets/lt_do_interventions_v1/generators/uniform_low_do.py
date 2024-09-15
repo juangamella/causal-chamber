@@ -142,7 +142,6 @@ for target, full_range in full_ranges.items():
             print(f"\nSET,flag,{j}", file=f)
             # Perform intervention
             fmt = "%0.2f" % value if isinstance(value, float) else "%d" % value
-            print(target, value, type(value), fmt)
             print(f"SET,{target},{fmt}", file=f)
             for i in range(N):
                 # Sample and set actuator values
