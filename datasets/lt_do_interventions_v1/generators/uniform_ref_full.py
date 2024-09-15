@@ -100,7 +100,7 @@ with open(filename, "w") as f:
         # Sample and set actuator values
         for variable in variable_ranges.keys():
             value = sample_value(variable)
-            fmt = "%0.2f" % value if type(value) == np.float64 else "%d" % value
+            fmt = "%0.2f" % value if isinstance(value, float) else "%d" % value
             print(f"SET,{variable},{fmt}", file=f)
         # Take a measurement
         print("MSR,1,0\n", file=f)
