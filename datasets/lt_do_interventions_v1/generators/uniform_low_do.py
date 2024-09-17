@@ -104,7 +104,8 @@ variable_ranges = {
 rng = np.random.default_rng(1726235328)
 
 
-def enumerate_values(variable, interval):
+def sample_value(variable):
+    interval = variable_ranges[variable]
     if type(interval) == list:
         values = interval
     elif type(interval) == tuple:
@@ -113,12 +114,18 @@ def enumerate_values(variable, interval):
             values = np.arange(lo, hi + 0.1, 0.1)
         else:
             values = np.arange(lo, hi + 1)
-    return values
-
-
-def sample_value(variable, interval):
-    values = enumerate_values(variable, interval)
+    # Sample
     return rng.choice(values)
+
+
+def target_levels(variable, points=8):
+    interval = full_ranges[variable]
+    if type(interval) == list:
+        values = interval
+    elif type(interval) == tuple:
+        lo, hi = interval
+        values = np.linspace(lo, hi, points).astype(int)
+    return values
 
 
 for target, full_range in full_ranges.items():
@@ -126,30 +133,31 @@ for target, full_range in full_ranges.items():
     print(f"  {protocol_name}")
     filename = f"{OUTPUT_DIR}/{protocol_name}"
 
-    # Shuffle values
-    target_values = enumerate_values(target, full_range)
+    # Generate target values
+    N = 1000  # observations per intervention
+    target_values = target_levels(target)
+    print(f"    target levels ({target}): {target_values}")
+    target_values = list(target_values) * N
     rng.shuffle(target_values)
 
     # We collect N = 1000 per intervention on a categorial variable
     #   and 10 if it's "continuous", e.g., red, green, pol_1, ...
-    N = 1000 if len(target_values) <= 4 else 10
 
     # Generate the protocol
     with open(filename, "w") as f:
         print("SET,camera,0\n\n", file=f)
-        for j, value in enumerate(target_values):
+        for value in target_values:
             # Set flag to identify this intervention
-            print(f"\nSET,flag,{j}", file=f)
+            print(f"\nSET,flag,{value}", file=f)
             # Perform intervention
             fmt = "%0.2f" % value if isinstance(value, float) else "%d" % value
             print(f"SET,{target},{fmt}", file=f)
-            for i in range(N):
-                # Sample and set actuator values
-                for variable, interval in variable_ranges.items():
-                    if variable == target:
-                        continue
-                    value = sample_value(variable, interval)
-                    fmt = "%0.2f" % value if isinstance(value, float) else "%d" % value
-                    print(f"SET,{variable},{fmt}", file=f)
-                # Take a measurement
-                print("MSR,1,0\n", file=f)
+            # Sample and set other actuator values
+            for variable, interval in variable_ranges.items():
+                if variable == target:
+                    continue
+                value = sample_value(variable)
+                fmt = "%0.2f" % value if isinstance(value, float) else "%d" % value
+                print(f"SET,{variable},{fmt}", file=f)
+            # Take a measurement
+            print("MSR,1,0\n", file=f)
