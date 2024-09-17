@@ -136,6 +136,7 @@ for target, full_range in full_ranges.items():
     # Generate target values
     N = 1000  # observations per intervention
     target_values = target_levels(target)
+    flag = dict(zip(target_values, np.arange(len(target_values))))
     print(f"    target levels ({target}): {target_values}")
     target_values = list(target_values) * N
     rng.shuffle(target_values)
@@ -148,7 +149,7 @@ for target, full_range in full_ranges.items():
         print("SET,camera,0\n\n", file=f)
         for value in target_values:
             # Set flag to identify this intervention
-            print(f"\nSET,flag,{value}", file=f)
+            print(f"\nSET,flag,{flag[value]}", file=f)
             # Perform intervention
             fmt = "%0.2f" % value if isinstance(value, float) else "%d" % value
             print(f"SET,{target},{fmt}", file=f)
