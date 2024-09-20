@@ -17,7 +17,7 @@ If you use any of the datasets or source code in your work, please consider citi
 
 | Link     | MD5 Checksum                     |
 |:--------:|:--------------------------------:|
-| [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_camera_test_v1.zip) | 9e825f53a1e53077ff329c8d8a31dbc0 |
+| [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_camera_test_v1.zip) | f31537ce8db74c537ab2f9ffa2f6f1f9 |
 
 You can also import the dataset directly into your Python code with the [`causalchamber`](https://pypi.org/project/causalchamber/) package. Install it using pip, e.g.
 
@@ -68,12 +68,16 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 | palette      | [`generators/palette.py`](generators/palette.py) | Capture images of 14 different light-source colors ($R,G,B$) for combinations of the camera parameters $(\text{Ap}, \text{ISO}, T_\text{Im}) \in \\{1.8, 11\\} \times \\{100,1000\\} \times \\{0.005, 0.001\\}.$ |
 | polarizer\_effect\_bright<br>polarizer\_effect\_dark      | [`generators/polarizer_effect.py`](generators/polarizer_effect.py) | Capture images of primary light-source colors and their combinations under different positions of the polarizers, in a high-exposure setting (bright, $\text{Ap}=1.8, \text{ISO}=1000, T_\text{Im}=0.005$) and a low-exposure setting (dark, $\text{Ap}=22, \text{ISO}=100, T_\text{Im}=0.001$).|
 | pure\_colors\_bright<br>pure\_colors\_dark      | [`generators/pure_colors.py`](generators/pure_colors.py) | Capture images of pure red $(R=255, G=B=0)$, green $(R=B=0, G=255)$ and blue $(R=G=0, B=255)$ under aligned polarizers, in a high-exposure setting (bright, $\text{Ap}=1.8, \text{ISO}=1000, T_\text{Im}=0.005$) and a low-exposure setting (dark, $\text{Ap}=22, \text{ISO}=100, T_\text{Im}=0.001$).|
+| aperture | [`generators/parameters.py`](generators/parameters.py) | We iterate over all possible values of $\text{Ap}$  while keeping the other parameters fixed at $\text{ISO}=100$ and $T_\text{Im}=1/200$. For each value of $\text{Ap}$, we take an image for different intensities of white, red, green and blue light from the light source. |
+| iso | [`generators/parameters.py`](generators/parameters.py) | We iterate over all possible values of $\text{ISO}$  while keeping the other parameters fixed at $\text{Ap}=1.8$ and $T_\text{Im}=1/200$. For each value of $\text{ISO}$, we take an image for different intensities of white, red, green and blue light from the light source. |
+| shutter\_speed | [`generators/parameters.py`](generators/parameters.py) | We iterate over all possible values of $T_\text{Im}$ while keeping the other parameters fixed at $\text{Ap}=1.8$ and $\text{ISO}=100$. For each value of $T_\text{Im}$, we take an image for different intensities of white, red, green and blue light from the light source. |
 
 ## Changelog
 
 | Dataset version | Date       | Description                     |
 |:---------------:|:----------:|:-------------------------------:|
-| v1.0            | 24.03.2024 | Initial release of the dataset. |
+| v1.0            | 24.03.2024 | Initial release of the dataset. 
+| v1.1            | 20.09.2024 | Added aperture, iso and shutter\_speed experiments. |
 
 ## Compiling the Experiment Protocols
 

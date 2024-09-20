@@ -59,7 +59,7 @@ datasets:
     chamber: "lt"
     image: True
     url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_camera_test_v1.zip"
-    md5: "9e825f53a1e53077ff329c8d8a31dbc0"
+    md5: "f31537ce8db74c537ab2f9ffa2f6f1f9"
   wt_validate_v1:
     chamber: "wt"
     image: False
