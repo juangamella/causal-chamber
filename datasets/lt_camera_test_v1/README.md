@@ -17,7 +17,7 @@ If you use any of the datasets or source code in your work, please consider citi
 
 | Link     | MD5 Checksum                     |
 |:--------:|:--------------------------------:|
-| [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_camera_test_v1.zip) | 9e825f53a1e53077ff329c8d8a31dbc0 |
+| [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_camera_test_v1.zip) | f31537ce8db74c537ab2f9ffa2f6f1f9 |
 
 You can also import the dataset directly into your Python code with the [`causalchamber`](https://pypi.org/project/causalchamber/) package. Install it using pip, e.g.
 
