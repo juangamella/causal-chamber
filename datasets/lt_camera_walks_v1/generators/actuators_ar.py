@@ -151,9 +151,9 @@ for seed, (name, settings) in enumerate(all_settings.items()):
         for i in range(N):
             print("", file=f)
             # Set light source levels
-            print(f"SET,red,{values['red'][i]}", file=f)
-            print(f"SET,green,{values['green'][i]}", file=f)
-            print(f"SET,blue,{values['blue'][i]}", file=f)
+            print(f"SET,red,{int(values['red'][i])}", file=f)
+            print(f"SET,green,{int(values['green'][i])}", file=f)
+            print(f"SET,blue,{int(values['blue'][i])}", file=f)
             # Set polarizer angles
             print("SET,pol_1,%0.1f" % values["pol_1"][i], file=f)
             print("SET,pol_2,%0.1f" % values["pol_2"][i], file=f)
