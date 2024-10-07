@@ -141,9 +141,6 @@ for target, full_range in full_ranges.items():
     target_values = list(target_values) * N
     rng.shuffle(target_values)
 
-    # We collect N = 1000 per intervention on a categorial variable
-    #   and 10 if it's "continuous", e.g., red, green, pol_1, ...
-
     # Generate the protocol
     with open(filename, "w") as f:
         print("SET,camera,0\n\n", file=f)
