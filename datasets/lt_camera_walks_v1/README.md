@@ -17,7 +17,7 @@ If you use any of the datasets or source code in your work, please consider citi
 
 | Link     | MD5 Checksum                     |
 |:--------:|:--------------------------------:|
-| [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_camera_walks_v1.zip) | f3b50b0df634aec50c70df7550a8f6ea |
+| [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_camera_walks_v1.zip) | 242e28c4a42966bf1c6cf307bb3a556c |
 
 You can also import the dataset directly into your Python code with the [`causalchamber`](https://pypi.org/project/causalchamber/) package. Install it using pip, e.g.
 
@@ -65,8 +65,15 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 |:----------------------:|:---------:|:------------|
 |   actuator\_mix  |    [`generators/actuator_mix.py`](generators/actuator_mix.py) | We vary the value of $R,G,B, \theta_1, \theta_2$ following a sine, sawtooth, chirp, triangular and square signal, respectively (see [`scipy.signal`](https://docs.scipy.org/doc/scipy/reference/signal.html#waveforms)). We collect a total of $N=10^4%$ observations. Used in task d3 of the ICA case study (Fig. 6 of the original [paper](https://arxiv.org/pdf/2404.11341.pdf)). |
 |   color\_mix  |    [`generators/color_mix.py`](generators/color_mix.py) | We vary the value of $R,G,B$ following a sine, square, and sawtooth wave, respectively. We collect a total of $N=10^4%$ observations. |
-|   ar\_1\_uniform\_ref | [`generators/actuators_ar.py`](generators/actuators_ar.py) | We sample the values of $R,G,B,\theta_1,\theta_2$ from scaled and shifted stationary $\text{AR}(1)$. For each actuator, we sample $N=3\times10^{4}$ observations from the $\text{AR}(1)$ process $X(t) := \varphi X(t-1) + \epsilon_t$ where $\epsilon_1,\ldots,\epsilon_N \overset{\text{i.i.d.}}{\sim} \text{Unif}[-1,1]$ and $\varphi = 0.5, 0.6, 0.7, 0.8, 0.9$ for $R,G,B,\theta_1$ and $\theta_2$, respectively. For each actuator, we then scale and shift $X(t)$ so that its values fall in the range $[\mu - \Delta, \mu + \Delta]$, where $(\mu,\Delta) := (128,120)$ for $R,G,B$ and $(\mu,\Delta) := (0,20)$ for $\theta_1, \theta_2$. A visualization of the resulting time-series are shown below. |
-|   ar\_1\_uniform\_pol_1 | [`generators/actuators_ar.py`](generators/actuators_ar.py) | We repeat the ar\_1\_uniform\_ref experiment above, but we set $\mu := 90$ for $\theta_1$, effectively shifting the mean of its stochastic process by 90 (degrees). |
+|   ar\_1\_uniform\_ref | [`generators/actuators_ar.py`](generators/actuators_ar.py) | We sample the values of $R,G,B,\theta_1,\theta_2$ from scaled and shifted stationary $\text{AR}(1)$. For each actuator, we sample $N=3\times10^{4}$ observations from the $\text{AR}(1)$ process $X(t) := \varphi X(t-1) + \epsilon_t$ where $\epsilon_1,\ldots,\epsilon_N \overset{\text{i.i.d.}}{\sim} \text{Unif}[-1,1]$ and $\varphi = 0.5, 0.6, 0.7, 0.8, 0.9$ for $R,G,B,\theta_1$ and $\theta_2$, respectively. For each actuator, we then shift and scale $X(t)$ so that its values fall in the range $[\mu - \Delta, \mu + \Delta]$, where $(\mu,\Delta) := (128,120)$ for $R,G,B$ and $(\mu,\Delta) := (0,20)$ for $\theta_1, \theta_2$. A visualization of the resulting time-series are shown below. |
+
+[//]: #|   ar\_1\_uniform\_pol_1 | [`generators/actuators_ar.py`](generators/actuators_ar.py) | We repeat the ar\_1\_uniform\_ref experiment above, but we set $\mu := 90$ for $\theta_1$, effectively shifting the mean of its stochastic process by 90 (degrees). |
+
+## Visualization
+
+Below we plot the actuator time-series for the _ar\_1\_uniform\*_ experiments.
+
+![]()
 
 ## Changelog
 
