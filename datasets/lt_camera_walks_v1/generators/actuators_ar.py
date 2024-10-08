@@ -110,7 +110,7 @@ exogenous_zeros = {
 }
 
 # Generation parameters
-N = int(20e3)
+N = int(30e3)
 
 # Parameters for the time series of each actuator in each experiment
 all_settings = {
@@ -118,15 +118,15 @@ all_settings = {
         "red": (0.5, 128, 120),
         "green": (0.6, 128, 120),
         "blue": (0.7, 128, 120),
-        "pol_1": (0.8, 0, 20),
-        "pol_2": (0.9, 0, 20),
+        "pol_1": (0.8, 0, 30),
+        "pol_2": (0.9, 0, 30),
     },
     "pol_1": {
         "red": (0.5, 128, 120),
         "green": (0.6, 128, 120),
         "blue": (0.7, 128, 120),
-        "pol_1": (0.8, 0, 20),
-        "pol_2": (0.9, 90, 20),
+        "pol_1": (0.8, 0, 30),
+        "pol_2": (0.9, 90, 30),
     },
 }
 
@@ -144,7 +144,7 @@ for seed, (name, settings) in enumerate(all_settings.items()):
         # Sample actuator values
         values = {}
         for i, (var, (coef, mean, scale)) in enumerate(settings.items()):
-            x = sample_AR_1_uniform(N, coef, random_state=i + 1728296067) * scale + mean
+            x = sample_AR_1_uniform(N, coef, random_state=seed + i + 1728296067) * scale + mean
             values[var] = x
 
         # Set actuator values
