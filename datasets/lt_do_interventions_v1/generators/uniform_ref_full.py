@@ -34,7 +34,7 @@ import numpy as np
 OUTPUT_DIR = "./protocols"
 
 # Generation parameters
-N = int(1e5)  # 100K
+N = int(1e6)  # 100K
 
 # Dictionary with the exogenous variables and their zero-levels
 variable_ranges = {
@@ -70,7 +70,7 @@ variable_ranges = {
 }
 
 
-rng = np.random.default_rng(4991231238)
+rng = np.random.default_rng(49958231008)
 
 
 def sample_value(variable):
