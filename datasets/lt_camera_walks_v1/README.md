@@ -67,6 +67,7 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 |   color\_mix  |    [`generators/color_mix.py`](generators/color_mix.py) | We vary the value of $R,G,B$ following a sine, square, and sawtooth wave, respectively. We collect a total of $N=10^4%$ observations. |
 |   ar\_1\_uniform\_ref | [`generators/actuators_ar.py`](generators/actuators_ar.py) | We sample the values of $R,G,B,\theta_1,\theta_2$ from scaled and shifted stationary $\text{AR}(1)$. For each actuator, we sample $N=3\times10^{4}$ observations from the $\text{AR}(1)$ process $X(t) := \varphi X(t-1) + \epsilon_t$ where $\epsilon_1,\ldots,\epsilon_N \overset{\text{i.i.d.}}{\sim} \text{Unif}[-1,1]$ and $\varphi = 0.5, 0.6, 0.7, 0.8, 0.9$ for $R,G,B,\theta_1$ and $\theta_2$, respectively. For each actuator, we then shift and scale $X(t)$ so that its values fall in the range $[\mu - \Delta, \mu + \Delta]$, where $(\mu,\Delta) := (128,120)$ for $R,G,B$ and $(\mu,\Delta) := (0,20)$ for $\theta_1, \theta_2$. A visualization of the resulting time-series are shown below. |
 | ar\_1\_uniform\_pol\_1\_90 | [`generators/actuators_ar.py`](generators/actuators_ar.py) | We repeat the ar\_1\_uniform\_ref experiment above, but we set $\mu := 90$ for $\theta_1$, effectively shifting the mean of its stochastic process by 90 (degrees). |
+| ar\_1\_uniform\_pol\_12\_30 | [`generators/actuators_ar.py`](generators/actuators_ar.py) | We repeat the ar\_1\_uniform\_ref experiment above, but we set $\mu := 30$ for $\theta_1$ and $\theta_2$, effectively shifting the mean of their stochastic processes by 30 (degrees). |
 
 ## Visualization
 
@@ -74,6 +75,7 @@ Below we plot the actuator time-series for the _ar\_1\_uniform\*_ experiments.
 
 ![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/actuators_ar_1_uniform_ref.png)
 ![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/actuators_ar_1_uniform_pol_1_90.png)
+![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/actuators_ar_1_uniform_pol_12_30.png)
 
 ## Changelog
 

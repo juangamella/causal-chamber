@@ -152,7 +152,8 @@ for seed, (name, settings) in enumerate(all_settings.items()):
         values = {}
         for i, (var, (coef, mean, scale)) in enumerate(settings.items()):
             x = (
-                sample_AR_1_uniform(N, coef, random_state=seed + i + 1728296067) * scale
+                sample_AR_1_uniform(N, coef, random_state=100 * seed + i + 1728296067)
+                * scale
                 + mean
             )
             values[var] = x
