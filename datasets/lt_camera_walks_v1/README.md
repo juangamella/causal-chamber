@@ -73,9 +73,9 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 
 Below we plot the actuator time-series for the _ar\_1\_uniform\*_ experiments.
 
-![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/actuators_ar_1_uniform_ref.png)
-![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/actuators_ar_1_uniform_pol_1_90.png)
-![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/actuators_ar_1_uniform_pol_12_30.png)
+![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/actuators_ar_1_uniform_ref.png?)
+![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/actuators_ar_1_uniform_pol_1_90.png?)
+![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/actuators_ar_1_uniform_pol_12_30.png?)
 
 ## Changelog
 
