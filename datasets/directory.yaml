@@ -14,7 +14,7 @@ datasets:
     chamber: "lt"
     image: True
     url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_camera_walks_v1.zip"
-    md5: "211fd53532c592fbaa47fffd65fd8fa7"
+    md5: "097f291680a9a57d2c62bd2bc2b78fce"
   lt_walks_v1:
     chamber: "lt"
     image: False
