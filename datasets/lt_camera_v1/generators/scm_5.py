@@ -132,7 +132,7 @@ D /= norm
 # Sample noise-term variances and observational / interventional means
 rng = np.random.default_rng(42)
 means = rng.uniform(0.3, 0.4, size=p)
-stds = rng.uniform(0.07, 0.1, size=p)
+stds = rng.uniform(0.1, 0.15, size=p)
 shifts = rng.uniform(0.1, 0.11, size=p)
 print("Observational means")
 print(repr(means))
