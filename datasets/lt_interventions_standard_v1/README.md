@@ -70,8 +70,6 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 | uniform_v_angle_1_mid<br>uniform_v_angle_2_mid<br>uniform_v_c_mid | [`generators/uniform.py`](generators/uniform.py) | We set $R_1, R_2,$ or $R_C = 2.56$ and sample all other manipulable variables as in `uniform_reference`. We collect $N = 1000$ measurements. |
 | uniform_v_angle_1_strong<br>uniform_v_angle_2_strong<br>uniform_v_c_strong | [`generators/uniform.py`](generators/uniform.py) | We set $R_1, R_2$ or $R_C = 1.1$ and sample all other manipulable variables as in `uniform_reference`. We collect $N = 1000$ measurements. |
 
-
-
 ## Changelog
 
 | Dataset version | Date       | Description                     |
