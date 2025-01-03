@@ -21,6 +21,10 @@ Here you can also find the resources to [build the chambers](#building-the-chamb
 
 The code to reproduce the case studies in the original paper can be found in the separate [paper repository](https://github.com/juangamella/causal-chamber-paper).
 
+## Do you need help?
+
+This repository contains quite a few datasets. If you need help choosing the right one for your work, please write us an [email](mailto:juangamella@gmail.com) or directly [book]() one of our weekly help sessions.
+
 ## Available datasets
 
 We are open to suggestions of additional experiments that may prove interesting; please reach out to the [corresponding author](https://github.com/juangamella).
