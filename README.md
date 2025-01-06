@@ -23,7 +23,7 @@ The code to reproduce the case studies in the original paper can be found in the
 
 ## Need help?
 
-If you need help choosing the right dataset for your work, please write us an [email](mailto:juangamella@gmail.com) or directly [book](https://calendly.com/juangamella/repo) one of our weekly help sessions.
+If you need help choosing the right dataset for your work, please write us an [email](mailto:juangamella@gmail.com).
 
 ## Available datasets
 
