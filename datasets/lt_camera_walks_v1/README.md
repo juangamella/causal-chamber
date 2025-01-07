@@ -1,6 +1,6 @@
 # Dataset: lt\_camera\_walks\_v1
 
-[<<< Back to all datasets](https://github.com/juangamella/causal-chamber/tree/main)
+[<<< Back to all datasets](https://github.com/juangamella/causal-chamber)
 
 If you use any of the datasets or source code in your work, please consider citing:
 
