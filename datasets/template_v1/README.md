@@ -1,6 +1,6 @@
 # Dataset: TEMPLATE
 
-[<<< Back to all datasets](http://causalchamber.org)
+[<<< Back to all datasets](https://github.com/juangamella/causal-chamber/tree/main)
 
 If you use any of the datasets or source code in your work, please consider citing:
 
