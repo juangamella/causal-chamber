@@ -12,10 +12,11 @@ Model D1 of the difference between the readings of the up- and downwind baromete
 If you use the models in your scientific work, please consider citing:
 
 ```
-@article{gamella2024chamber,
-  title={The Causal Chambers: Real Physical Systems as a Testbed for AI Methodology},
-  author={Gamella, Juan L. and B\"uhlmann, Peter and Peters, Jonas},
-  journal={(work in progress)},
-  year={2023}
+﻿@article{gamella2025chamber,
+  author={Gamella, Juan L. and Peters, Jonas and B{\"u}hlmann, Peter},
+  title={Causal chambers as a real-world physical testbed for {AI} methodology},
+  journal={Nature Machine Intelligence},
+  doi={10.1038/s42256-024-00964-x},
+  year={2025},
 }
 ```
