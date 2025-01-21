@@ -7,11 +7,12 @@ This repository contains datasets collected from the _causal chambers_, the two 
 The datasets are publicly available through a permissive [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). This means you are free to use, share and modify the datasets as long as you give appropriate credit and communicate changes. If you use the datasets in your scientific work, please consider citing:
 
 ```
-@article{gamella2024chamber,
-  title={The Causal Chambers: Real Physical Systems as a Testbed for AI Methodology},
-  author={Gamella, Juan L. and B\"uhlmann, Peter and Peters, Jonas},
-  journal={arXiv preprint arXiv:2404.11341},
-  year={2024}
+﻿@article{gamella2025chamber,
+  author={Gamella, Juan L. and Peters, Jonas and B{\"u}hlmann, Peter},
+  title={Causal chambers as a real-world physical testbed for {AI} methodology},
+  journal={Nature Machine Intelligence},
+  doi={10.1038/s42256-024-00964-x},
+  year={2025},
 }
 ```
 

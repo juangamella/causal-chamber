@@ -3,11 +3,12 @@ import causalchamber.utils
 import causalchamber.ground_truth
 
 citation = """
-@article{gamella2024chamber,
-  title={The Causal Chambers: Real Physical Systems as a Testbed for AI Methodology},
-  author={Gamella, Juan L. and B\"uhlmann, Peter and Peters, Jonas},
-  journal={arXiv preprint arXiv:2404.11341},
-  year={2024}
+﻿@article{gamella2025chamber,
+  author={Gamella, Juan L. and Peters, Jonas and B{\"u}hlmann, Peter},
+  title={Causal chambers as a real-world physical testbed for {AI} methodology},
+  journal={Nature Machine Intelligence},
+  doi={10.1038/s42256-024-00964-x},
+  year={2025},
 }
 """
 
