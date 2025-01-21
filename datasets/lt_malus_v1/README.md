@@ -1,6 +1,6 @@
 # Dataset: lt\_malus\_v1
 
-[<<< Back to all datasets](http://causalchamber.org)
+[<<< Back to all datasets](https://github.com/juangamella/causal-chamber)
 
 If you use any of the datasets or source code in your work, please consider citing:
 

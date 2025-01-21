@@ -18,13 +18,13 @@ The datasets are publicly available through a permissive [CC BY 4.0 license](htt
 
 This repository also contains the source code for the `causalchamber` [package](https://pypi.org/project/causalchamber/) to directly [import the datasets into your Python code](#downloading-the-datasets). The package also provides Python implementations of the [mechanistic models](#mechanistic-models) described in appendix IV of the original [paper](https://arxiv.org/pdf/2404.11341.pdf).
 
-Here you can also find the resources to [build the chambers](#building-the-chambers), and the datasheets for all chamber components (see [`hardware/`](hardware/)).
+Here you can also find the resources to build the chambers (see [`hardware/`](hardware/)).
 
 The code to reproduce the case studies in the original paper can be found in the separate [paper repository](https://github.com/juangamella/causal-chamber-paper).
 
 ## Need help?
 
-If you need help choosing the right dataset for your work, please write us an [email](mailto:juangamella@gmail.com) or directly [book](https://calendly.com/juangamella/repo) one of our weekly help sessions.
+If you need help choosing the right dataset for your work, please write us an [email](mailto:juangamella@gmail.com).
 
 ## Available datasets
 
@@ -139,10 +139,6 @@ latex_name('pol_1', enclose=True)
 ```
 
 Setting `enclose=False` will return the name without surrounding `$`.
-
-## Building the chambers
-
-You can find the resources to build the chambers in [`hardware/`](hardware/), together with the datasheets for all physical components (see appendix VI of the original [paper](https://arxiv.org/pdf/2404.11341.pdf)).
 
 ## Licenses
 

@@ -1,6 +1,6 @@
 # Dataset: lt\_camera\_v1
 
-[<<< Back to all datasets](http://causalchamber.org)
+[<<< Back to all datasets](https://github.com/juangamella/causal-chamber)
 
 If you use any of the datasets or source code in your work, please consider citing:
 
@@ -88,6 +88,7 @@ Below we plot the actuator distributions for the _betab\_ap\_1.8\_iso\_500.0\_ss
 | v1.1            | 02.08.2024 | New _betab\_ap\_1.8\_iso\_500.0\_ss\_0.005_ experiment. |
 | v1.2            | 10.09.2024 | New _scm\_2\_*_ experiments.                            |
 | v1.3            | 15.10.2024 | New _scm\_4\_*_ and _scm\_5\_*_ experiments.            |
+| v1.4            | 07.01.2025 | Added 64x64 image size for the _betab\_ap\_1.8\_iso\_500.0\_ss\_0.005_ and _uniform\_ap\_1.8\_iso\_500.0\_ss\_0.005_ experiments. |
 
 ## Compiling the Experiment Protocols
 

@@ -1,4 +1,4 @@
-last_updated: 2024-04-17
+last_updated: 2025-01-07
 datasets:
   wt_changepoints_v1:
     chamber: "wt"
@@ -89,5 +89,5 @@ datasets:
     chamber: "lt"
     image: True
     url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_camera_v1.zip"
-    md5: "1f35abfc03676d61e9b49083eb466edc"
+    md5: "9f4b52efdb1c08bd5ab615b6edc8ed95"
 

@@ -1,3 +1,5 @@
+v0.1.2, 2025-01-21
+-- Updated citation to point to the Nature MI version of the manuscript
 v0.1.1, 2024-05-08
 -- Minimum required Python lowered to 3.6
 v0.1.0, 2024-04-17
