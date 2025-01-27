@@ -8,7 +8,7 @@ Here you can find the resources to build the initial wind tunnel and light tunne
 
 To build the chambers you will need some common assembly tools and access to some more specialized equipment: a laser cutter of sufficient size and an electronics bench (for soldering and testing). We assume that you already posses the pertinent knowledge to use them.
 
-<mark>You can also submit experiments to a chamber our **online service and API**. Click [here](https://tally.so/r/wbNe0e) for more details.</mark>
+<mark>Instead of building one, you can submit experiments to a chamber through our **online service and API**. Click [here](https://tally.so/r/wbNe0e) for more details.</mark>
 
 ## Licenses
 
