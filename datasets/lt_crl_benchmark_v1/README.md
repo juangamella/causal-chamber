@@ -17,11 +17,13 @@ If you use any of the datasets or source code in your work, please consider citi
 and
 
 ```
-﻿@article{gamella2025sanity,
-  author={Gamella*, Juan L. and Bing*, Simon and Runge, Jakob},
-  title={Sanity Checking Causal Representation Learning on a Simple Real-World System},
-  journal={arXiv preprint arXiv:TODO},
-  year={2025}
+@article{gamellabing2025sanity,
+  title     = {Sanity Checking Causal Representation Learning on a Simple Real-World System},
+  author    = {Gamella*, Juan L. and Bing*, Simon and Runge, Jakob},
+  year      = {2025},
+  journal   = {arXiv preprint arXiv:TODO},
+  eprint    = {TODO},
+  note      = {*equal contribution}
 }
 ```
 
