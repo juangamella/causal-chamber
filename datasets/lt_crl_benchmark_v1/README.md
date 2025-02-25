@@ -81,13 +81,6 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 | uniform | [`generators/uniform.py`](generators/uniform.py)| The actuators ($R,G,B,\theta\_1,\theta\_2$) are sampled uniformly at random, i.e., $R,G,B \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{0,\ldots,255\\})$, $\theta_1, \theta_2 \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{-90,-89.9,\ldots,90\\})$. We collect a total of $n=2000$ observations. |
 | buchholz_1_obs\_synth\_det<br>buchholz_1_red\_synth\_det<br>buchholz_1_green\_synth\_det<br>buchholz_1_blue\_synth\_det<br>buchholz_1_pol_1\_synth\_det<br>buchholz_1_pol_2\_synth\_det<br>citris\_1\_synth\_det<br>uniform\_synth\_det | —| Synthetic equivalents of all the above experiments. The inputs ($R,G,B,\theta\_1,\theta\_2$) are sampled just like in the experiments above, but instead of collecting a real image and measurements from the light tunnel, we generate synthetic equivalents with the simulators described in [Appendix C](TODO) of the paper. A Python implementation of these simulators, and Jupyter notebooks with tutorials, can be found in the [Simulator Repository](TODO) of the `causalchamber` [package](https://github.com/juangamella/causal-chamber-package) (see simulators [`lt.DecoderSimple`](TODO) and [`lt.Deterministic`](TODO). |
 
-
-## Visualization
-
-Below we plot the actuator distributions for the _betab\_ap\_1.8\_iso\_500.0\_ss\_0.005_ experiment.
-
-![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/actuators_betabinomials.png)
-
 ## Changelog
 
 | Dataset version | Date       | Description                                             |
