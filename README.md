@@ -2,7 +2,7 @@
 
 ![The Causal Chambers: (left) the wind tunnel, and (right) the light tunnel with the front panel removed to show its interior.](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/the_chambers.jpg)
 
-This repository contains datasets collected from the _causal chambers_, the two devices described in the 2024 paper [*The Causal Chambers: Real Physical Systems as a Testbed for AI Methodology*](https://arxiv.org/pdf/2404.11341.pdf) by Juan L. Gamella, Jonas Peters and Peter Bühlmann. The repository is updated as we collect new datasets from the chambers.
+This repository contains datasets collected from the _causal chambers_, the two devices described in the 2025 paper [*Causal chambers as a real-world physical testbed for AI methodology*](https://www.nature.com/articles/s42256-024-00964-x) by Juan L. Gamella, Jonas Peters and Peter Bühlmann. The repository is updated as we collect new datasets from the chambers.
 
 The datasets are publicly available through a permissive [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). This means you are free to use, share and modify the datasets as long as you give appropriate credit and communicate changes. If you use the datasets in your scientific work, please consider citing:
 
@@ -34,6 +34,7 @@ Each dataset below is described in detail in its corresponding page (click the d
 
 | Dataset name | Notes | Chamber | Config. |
 |--------:|:--------------------------------|:--------:|:--------:|
+| [lt_crl_benchmark_v1](datasets/lt_crl_benchmark_v1/) | Datasets for the 2025 benchmark paper "*Sanity Checking Causal Representation Learning on a Simple Real-World System*" | Light tunnel | camera |
 | [lt_camera_walks_v1](datasets/lt_camera_walks_v1/) | Image data for the ICA case study (task d3, Fig. 6). | Light tunnel | camera |
 | [lt_color_regression_v1](datasets/lt_color_regression_v1/) | Image data for task b2 in the OOD case study (Fig. 5) | Light tunnel | camera |
 | [lt_interventions_standard_v1](datasets/lt_interventions_standard_v1/) | Observational and interventional data from the light tunnel, used for the causal discovery case study in Fig. 5. | Light tunnel | standard |
