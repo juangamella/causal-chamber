@@ -23,6 +23,7 @@
 import numpy as np
 
 # Weights matrix
+#   W[i,j] != 0 implies the edge i -> j
 W = np.array(
     [
         [0.0, 0.0, 0.0, 0.0, 0.0],
@@ -40,7 +41,11 @@ obs_means = np.array([0.0, 0.0, 0.0, 0.0, 0.0])
 obs_vars = np.array([1.3855493, 1.16426732, 1.00502177, 1.95646855, 1.27482347])
 
 # Intervention means
+#   i.e., the mean of the target receiving the intervention. The means
+#   of the other variables remain as in the obs. environment.
 int_means = np.array([1.16920556, 1.47496736, -1.60596209, -1.96578519, 1.0117071])
 
 # Intervention variances
+#  i.e., the variance of the target receiving the intervention. The
+#  variances of the other variables remain as in the obs. environment.
 int_vars = np.array([1.94878138, 1.35886756, 1.57343313, 1.1021785, 1.30511067])
