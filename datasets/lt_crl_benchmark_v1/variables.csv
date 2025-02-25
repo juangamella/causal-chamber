@@ -49,5 +49,3 @@ aperture,\text{Ap},See appendix II of the original paper.
 iso,\text{ISO},See appendix II of the original paper.
 shutter_speed,T_\text{Im},See appendix II of the original paper.
 image_file,,The filename of the image file corresponding to this observation.
-image_timestamp,,The timestamp of the image as stored in its EXIF data.
-brightness_value,,The APEX value of brightness in the EXIF data-see: https://en.wikipedia.org/wiki/APEX_system#Use_of_APEX_values_in_Exif
