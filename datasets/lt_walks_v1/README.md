@@ -67,10 +67,10 @@ Below we show the stochastic process of the tunnel inputs in the smooth\_polariz
 
 ## Changelog
 
-| Dataset version | Date       | Description                             |
-|:---------------:|:----------:|:---------------------------------------:|
-| v1.0            | 14.04.2024 | Initial release of the dataset.         |
-| v1.1            | 25.02.2025 | Added the smooth\_polarizers experiment |
+| Dataset version | Date       | Description                              |
+|:---------------:|:----------:|:----------------------------------------:|
+| v1.0            | 14.04.2024 | Initial release of the dataset.          |
+| v1.1            | 25.02.2025 | Added the smooth\_polarizers experiment. |
 
 ## Compiling the Experiment Protocols
 
