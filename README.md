@@ -34,7 +34,7 @@ Each dataset below is described in detail in its corresponding page (click the d
 
 | Dataset name | Notes | Chamber | Config. |
 |--------:|:--------------------------------|:--------:|:--------:|
-| [lt_crl_benchmark_v1](datasets/lt_crl_benchmark_v1/) | Datasets for the 2025 benchmark paper "*Sanity Checking Causal Representation Learning on a Simple Real-World System*" | Light tunnel | camera |
+| [lt_crl_benchmark_v1](datasets/lt_crl_benchmark_v1/) | Datasets for the 2025 benchmark paper "*Sanity Checking Causal Representation Learning on a Simple Real-World System*" by Juan L. Gamella\*, Simon Bing\*, and Jakob Runge. | Light tunnel | camera |
 | [lt_camera_walks_v1](datasets/lt_camera_walks_v1/) | Image data for the ICA case study (task d3, Fig. 6). | Light tunnel | camera |
 | [lt_color_regression_v1](datasets/lt_color_regression_v1/) | Image data for task b2 in the OOD case study (Fig. 5) | Light tunnel | camera |
 | [lt_interventions_standard_v1](datasets/lt_interventions_standard_v1/) | Observational and interventional data from the light tunnel, used for the causal discovery case study in Fig. 5. | Light tunnel | standard |
