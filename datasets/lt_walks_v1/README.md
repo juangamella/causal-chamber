@@ -18,7 +18,7 @@ If you use any of the datasets or source code in your work, please consider citi
 
 | Link     | MD5 Checksum                     |
 |:--------:|:--------------------------------:|
-| [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_walks_v1.zip) | 30a7d43b84e57f52bfd4b542f7a28b3c |
+| [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_walks_v1.zip) | dcad019186661a56de7a2d1db97fc2f0 |
 
 You can also import the dataset directly into your Python code with the [`causalchamber`](https://pypi.org/project/causalchamber/) package. Install it using pip, e.g.
 
@@ -56,13 +56,21 @@ The file [variables.csv](variables.csv) contains a brief description of each var
 |:----------------------:|:---------:|:------------|
 | actuators\_white| [`generators/actuators_white.py`](generators/actuators_white.py)| The values of all actuators are sampled uniformly at random before each measurement, i.e., $R,G,B,L_{11},\ldots,L_{32} \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{0,\ldots,255\\})$ and $\theta_1, \theta_2 \overset{\text{i.i.d.}}{\sim} \text{Unif}(\\{-90,-89,\ldots,90\\})$. | 
 |   color\_mix  |    [`generators/color_mix.py`](generators/color_mix.py) | We vary the value of $R,G,B$ according to a sine, square and sawtooth wave, respectively. We collect a total of $N=10^4%$ observations. The dataset is used in task d1 of the ICA case study (see [Fig. 6](https://arxiv.org/pdf/2404.11341.pdf)). |
+|   smooth\_polarizers  |    [`generators/smooth_polarizers.py`](generators/smooth_polarizers.py) | The tunnel inputs $R,G,B,L\_31,L\_32$ are sampled from the stochastic process shown below, i.e., each is sampled independently from a uniform distribution, with block changes in variance and mean. The first polarizer ($\theta\_1$) slowly increases in the range ($-90,180$) while the second polarizer is fixed at $\theta\_2=0$. We collect a total of $n=10000$ observations. |
 
+
+## Visualization
+
+Below we show the stochastic process of the tunnel inputs in the smooth\_polarizers experiment.
+
+![](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/smooth_polarizers.png)
 
 ## Changelog
 
-| Dataset version | Date       | Description                     |
-|:---------------:|:----------:|:-------------------------------:|
-| v1.0            | 14.04.2024 | Initial release of the dataset. |
+| Dataset version | Date       | Description                             |
+|:---------------:|:----------:|:---------------------------------------:|
+| v1.0            | 14.04.2024 | Initial release of the dataset.         |
+| v1.1            | 25.02.2025 | Added the smooth\_polarizers experiment |
 
 ## Compiling the Experiment Protocols
 
