@@ -20,7 +20,7 @@ If you use any of the datasets or source code in your work, please consider citi
 |:--------------------:|:------------:|
 | [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/wt_pressure_control_v1.zip) | 8cb1c9bf19cedc5baea7a9c15e54af6a |
 
-You can also import the dataset directly into your Python code with the [`causalchamber`](https://pypi.org/project/causalchamber/) package. Install it using pip, e.g.
+You can also import the dataset directly into your Python code with the [`causalchamber`](https://github.com/juangamella/causal-chamber-package) package. Install it using pip, e.g.
 
 ```
 pip install causalchamber

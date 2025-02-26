@@ -20,7 +20,7 @@ If you use any of the datasets or source code in your work, please consider citi
 |:--------:|:--------------------------------:|
 | [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_camera_walks_v1.zip) | 097f291680a9a57d2c62bd2bc2b78fce |
 
-You can also import the dataset directly into your Python code with the [`causalchamber`](https://pypi.org/project/causalchamber/) package. Install it using pip, e.g.
+You can also import the dataset directly into your Python code with the [`causalchamber`](https://github.com/juangamella/causal-chamber-package) package. Install it using pip, e.g.
 
 ```
 pip install causalchamber

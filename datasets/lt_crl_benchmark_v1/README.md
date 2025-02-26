@@ -34,7 +34,7 @@ and
 |:--------:|:--------------------------------:|
 | [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_crl_benchmark_v1.zip) | 8ec492afffd0142abd70b1fa7082b104 |
 
-You can also import the dataset directly into your Python code with the [`causalchamber`](https://pypi.org/project/causalchamber/) package. Install it using pip, e.g.
+You can also import the dataset directly into your Python code with the [`causalchamber`](https://github.com/juangamella/causal-chamber-package) package. Install it using pip, e.g.
 
 ```
 pip install causalchamber

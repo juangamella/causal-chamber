@@ -20,7 +20,7 @@ If you use any of the datasets or source code in your work, please consider citi
 |:--------:|:--------------------------------:|
 | [ZIP file](TEMPLATE) | 8e2742277e7ad978301eb830148e1d40 |
 
-You can also import the dataset directly into your Python code with the [`causalchamber`](https://pypi.org/project/causalchamber/) package. Install it using pip, e.g.
+You can also import the dataset directly into your Python code with the [`causalchamber`](https://github.com/juangamella/causal-chamber-package) package. Install it using pip, e.g.
 
 ```
 pip install causalchamber
