@@ -1,5 +1,11 @@
 # The Causal Chambers: Dataset Repository
 
+[![PyPI version](https://badge.fury.io/py/causalchamber.svg)](https://badge.fury.io/py/causalchamber)
+[![Downloads](https://static.pepy.tech/badge/causalchamber)](https://pepy.tech/project/causalchamber)
+[![License: CC-BY 4.0](https://img.shields.io/static/v1.svg?logo=creativecommons&logoColor=white&label=License&message=CC-BY%204.0&color=yellow)](https://creativecommons.org/licenses/by/4.0/)
+[![Donate](https://img.shields.io/static/v1.svg?logo=Github%20Sponsors&label=donate&message=Github%20Sponsors&color=e874ff)](https://github.com/sponsors/juangamella)
+
+
 ![The Causal Chambers: (left) the wind tunnel, and (right) the light tunnel with the front panel removed to show its interior.](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/the_chambers.jpg)
 
 This repository contains datasets collected from the _causal chambers_, the two devices described in the 2025 paper [*Causal chambers as a real-world physical testbed for AI methodology*](https://www.nature.com/articles/s42256-024-00964-x) by Juan L. Gamella, Jonas Peters and Peter Bühlmann. The repository is updated as we collect new datasets from the chambers.
@@ -16,11 +22,11 @@ The datasets are publicly available through a permissive [CC BY 4.0 license](htt
 }
 ```
 
-This repository also contains the source code for the `causalchamber` [package](https://pypi.org/project/causalchamber/) to directly [import the datasets into your Python code](#downloading-the-datasets). The package also provides Python implementations of the [mechanistic models](#mechanistic-models) described in appendix IV of the original [paper](https://arxiv.org/pdf/2404.11341.pdf).
-
 Here you can also find the resources to build the chambers (see [`hardware/`](hardware/)).
 
 The code to reproduce the case studies in the original paper can be found in the separate [paper repository](https://github.com/juangamella/causal-chamber-paper).
+
+See also the [separate repository](https://github.com/juangamella/causal-chamber-package) for the `causalchamber` [package](https://github.com/juangamella/causal-chamber-package), which allows you to directly download datasets to your Python code, load ground-truth graphs, access the remote API, and use the physical simulators of the chambers.
 
 ## Need help?
 
@@ -28,9 +34,9 @@ If you need help choosing the right dataset for your work, please write us an [e
 
 ## Available datasets
 
-We are open to suggestions of additional experiments that may prove interesting; please reach out to the [corresponding author](https://github.com/juangamella).
+We are open to suggestions of additional experiments that may prove interesting; please reach out via [email](mailto:juangamella@gmail.com).
 
-Each dataset below is described in detail in its corresponding page (click the dataset name). The chamber configurations are described in Fig. 3 of the manuscript.
+Each dataset is described in detail in its corresponding page (click the dataset name), together with the download instructions. The chamber configurations are described in [Fig. 3](https://www.nature.com/articles/s42256-024-00964-x/figures/3) of the [manuscript](https://www.nature.com/articles/s42256-024-00964-x).
 
 | Dataset name | Notes | Chamber | Config. |
 |--------:|:--------------------------------|:--------:|:--------:|
@@ -56,94 +62,30 @@ Each dataset below is described in detail in its corresponding page (click the d
 
 ## Downloading the datasets
 
-For each dataset, you can simply download a `.zip` file with all the data, including the images at different resolutions. The link and checksum (to verify integrity) are available on the page of each dataset (click on the dataset name in the table above).
-
-If you use Python, you can directly import a dataset into your code through the `causalchamber` [package](https://pypi.org/project/causalchamber/). You can install it using pip, e.g. by typing
-
-```
-pip install causalchamber
-```
-
-in an appropriate shell. Datasets can then be accessed directly from your Python code. For example, you can access the light-intensity data for the symbolic regression case study ([Fig. 6e](https://arxiv.org/pdf/2404.11341.pdf)) as follows:
+If you use Python, you can directly import a dataset into your code through the `causalchamber` [package](https://github.com/juangamella/causal-chamber-package). For example, you can load the [`lt_camera_test_v1`](https://github.com/juangamella/causal-chamber/tree/main/datasets/lt_camera_test_v1) image dataset as follows:
 
 ```python
-from causalchamber.datasets import Dataset
+import causalchamber.datasets as datasets
 
 # Download the dataset and store it, e.g., in the current directory
-dataset = Dataset(name='lt_malus_v1', root='./', download=True)
+dataset = datasets.Dataset(name='lt_camera_test_v1', root='./', download=True)
 
-# Select an experiment and load its observations
-experiment = dataset.get_experiment(name='white_255')
-df = experiment.as_pandas_dataframe()
+# Select an experiment and load the observations and images
+experiment = dataset.get_experiment(name='palette')
+
+observations = experiment.as_pandas_dataframe()
+images = experiment.as_image_array(size='200')
 ```
 
-For the available experiment names, see the page for each dataset (click on the dataset name in the table above) or run
-```python
-dataset.available_experiments()
+See each dataset page for a tailored example (e.g., [here](datasets/lt_test_v1/)), and the package [repository](https://github.com/juangamella/causal-chamber-package) for more details & documentation.
 
-# Output:
-# ['blue_128',
-#  'blue_255',
-#  'blue_64',
-#  'green_128',
-#  'green_255',
-#  'green_64',
-#  'red_128',
-#  'red_255',
-#  'red_64',
-#  'white_128',
-#  'white_255',
-#  'white_64']
-```
-
-## Mechanistic models
-
-The `causalchamber` [package](https://pypi.org/project/causalchamber/) also contains Python implementations of the mechanistic models described in appendix IV of the original [paper](https://arxiv.org/pdf/2404.11341.pdf). The models follow the same nomenclature as in the paper, e.g., to import and run model A1 of the steady-state fan speed:
-```Python
-import numpy as np
-from causalchamber.models import model_a1
-model_a1(L=np.linspace(0,1,10), L_min=0.1, omega_max=314.15)
-
-# Output:
-
-# array([ 31.415     ,  34.90555556,  69.81111111, 104.71666667,
-#        139.62222222, 174.52777778, 209.43333333, 244.33888889,
-#        279.24444444, 314.15      ])
-```
-
-The implementations can be found in the [`src/causalchamber/models`](src/causalchamber/models) directory. You can find examples of using the models in the [`case_studies/mechanistic_models.ipynb`](https://github.com/juangamella/causal-chamber-paper/blob/main/case_studies/mechanistic_models.ipynb) notebook in the separate [paper repository](https://github.com/juangamella/causal-chamber-paper).
-
-## Causal ground-truth graphs
-
-The graphs for the causal ground truths given in Fig. 3 of the original [paper](https://arxiv.org/pdf/2404.11341.pdf) can be found as adjacency matrices in  the [`ground_truths/`](ground_truths/) directory. The adjacencies can also be loaded through the `causalchamber` [package](https://pypi.org/project/causalchamber/), e.g., 
-```python
-from causalchamber.ground_truth import graph
-graph(chamber="lt", configuration="standard")
-
-# Output:
-
-#              red  green  blue  osr_c  v_c  current  pol_1  pol_2  osr_angle_1  \
-# red            0      0     0      0    0        1      0      0            0   
-# green          0      0     0      0    0        1      0      0            0   
-# blue           0      0     0      0    0        1      0      0            0   
-# osr_c          0      0     0      0    0        1      0      0            0   
-```
-
-To make it easier to plot graphs and reference them back to the original paper, the latex representation of each variable can be obtained by calling the `latex_name` function. For example, to obtain the latex representation $\theta_1$ of the `pol_1` variable, you can run
-```python
-from causalchamber.ground_truth import latex_name
-latex_name('pol_1', enclose=True)
-
-# Output:
-
-# '$\\theta_1$'
-```
-
-Setting `enclose=False` will return the name without surrounding `$`.
+You can also download a `.zip` file with all the data, including the images at different resolutions. The link and checksum (to verify integrity) are available on the dataset pages (click on the dataset name in the table above).
 
 ## Licenses
 
-All images and `.csv` files in the datasets are licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). A copy of the license can be found in [LICENSE_DATASETS.txt](LICENSE_DATASETS.txt).
+All images and `.csv` files in the datasets are licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). A copy of the license can be found in [LICENSE.txt](LICENSE.txt).
 
-The code, e.g., for the `causalchamber` package and mechanistic models, is shared under the [MIT license](https://opensource.org/license/mit/). A copy of the license can also be found in [LICENSE_SOFTWARE.txt](LICENSE_SOFTWARE.txt).
+## Contributing
+
+If you would like to make a (highly welcome!) contribution towards the costs of running this repository, you can do so as a [Github sponsor](https://github.com/sponsors/juangamella).
 
