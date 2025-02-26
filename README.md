@@ -61,7 +61,21 @@ Each dataset is described in detail in its corresponding page (click the dataset
 
 ## Downloading the datasets
 
-If you use Python, you can directly import a dataset into your code through the `causalchamber` [package](https://github.com/juangamella/causal-chamber-package). See each dataset page for a tailored example (e.g., [here](datasets/lt_camera_test_v1/)).
+If you use Python, you can directly import a dataset into your code through the `causalchamber` [package](https://github.com/juangamella/causal-chamber-package). For example, you can load the [`lt_camera_test_v1`](https://github.com/juangamella/causal-chamber/tree/main/datasets/lt_camera_test_v1) image dataset as follows:
+
+```python
+import causalchamber.datasets as datasets
+
+# Download the dataset and store it, e.g., in the current directory
+dataset = datasets.Dataset(name='lt_camera_test_v1', root='./', download=True)
+
+# Select an experiment and load the observations and images
+experiment = dataset.get_experiment(name='palette')
+observations = experiment.as_pandas_dataframe()
+images = experiment.as_image_array(size='200')
+```
+
+See each dataset page for a tailored example (e.g., [here](datasets/lt_test_v1/)), and the package [repository](https://github.com/juangamella/causal-chamber-package) for more details & documentation.
 
 You can also download a `.zip` file with all the data, including the images at different resolutions. The link and checksum (to verify integrity) are available on the dataset pages (click on the dataset name in the table above).
 
