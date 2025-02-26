@@ -26,7 +26,7 @@ Here you can also find the resources to build the chambers (see [`hardware/`](ha
 
 The code to reproduce the case studies in the original paper can be found in the separate [paper repository](https://github.com/juangamella/causal-chamber-paper).
 
-See also the [separate repository](https://github.com/juangamella/causal-chamber-package) for the `causalchamber` [package](https://github.com/juangamella/causal-chamber-package), which allows you to directly download datasets to your Python code, load ground-truth graphs, and use the physical simulators of the chambers.
+See also the [separate repository](https://github.com/juangamella/causal-chamber-package) for the `causalchamber` [package](https://github.com/juangamella/causal-chamber-package), which allows you to directly download datasets to your Python code, load ground-truth graphs, access the remote API, and use the physical simulators of the chambers.
 
 ## Need help?
 
@@ -72,6 +72,7 @@ dataset = datasets.Dataset(name='lt_camera_test_v1', root='./', download=True)
 
 # Select an experiment and load the observations and images
 experiment = dataset.get_experiment(name='palette')
+
 observations = experiment.as_pandas_dataframe()
 images = experiment.as_image_array(size='200')
 ```
@@ -82,7 +83,7 @@ You can also download a `.zip` file with all the data, including the images at d
 
 ## Licenses
 
-All images and `.csv` files in the datasets are licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). A copy of the license can be found in [LICENSE_DATASETS.txt](LICENSE_DATASETS.txt).
+All images and `.csv` files in the datasets are licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). A copy of the license can be found in [LICENSE.txt](LICENSE.txt).
 
 ## Contributing
 

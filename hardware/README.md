@@ -19,7 +19,9 @@ To build the chambers you will need some common assembly tools and access to som
 
 ## Licenses
 
-The resources to build the hardware, that is, the blueprints, schematics, component lists and the arduino and control code, are shared under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). This means you are free to use, share and modify them as long as you give appropriate credit and communicate changes. If you use these resources in your scientific work, please consider citing:
+The resources to build the hardware, that is, the blueprints, schematics, component lists and the arduino and control code, are shared under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). This means you are free to use, share and modify them as long as you give appropriate credit and communicate changes.
+
+If you use these resources in your scientific work, please consider citing:
 
 ```
 ﻿@article{gamella2025chamber,
