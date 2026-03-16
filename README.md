@@ -10,8 +10,8 @@
 
 This repository contains datasets collected from the _causal chambers_, the two devices described in the 2025 paper [*Causal chambers as a real-world physical testbed for AI methodology*](https://www.nature.com/articles/s42256-024-00964-x) by Juan L. Gamella, Jonas Peters and Peter Bühlmann. The repository is updated as we collect new datasets from the chambers.
 
-> [!TIP]
-> You can run real-time experiments on the chambers and collect your own datasets with our [Remote Lab](https://www.causalchamber.ai).
+> [!IMPORTANT]
+> You can run **real-time experiments** on the chambers and **collect your own datasets** with our [Remote Lab](https://www.causalchamber.ai).
 
 The datasets are publicly available through a permissive [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). This means you are free to use, share and modify the datasets as long as you give appropriate credit and communicate changes. If you use the datasets in your scientific work, please consider citing:
 
