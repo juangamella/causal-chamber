@@ -1,4 +1,4 @@
-# Dataset: lt\_crl\_benchmark\_v1
+# Dataset: lt\_spice\_v1
 
 [<<< Back to all datasets](https://github.com/juangamella/causal-chamber)
 
@@ -28,7 +28,7 @@ and
 
 | Link     | MD5 Checksum                     |
 |:--------:|:--------------------------------:|
-| [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_crl_benchmark_v1.zip) | 8ec492afffd0142abd70b1fa7082b104 |
+| [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_spice_v1.zip) | 47a2be5bd43ec5e098a15ea91bd2e60d |
 
 You can also import the dataset directly into your Python code with the [`causalchamber`](https://github.com/juangamella/causal-chamber-package) package. Install it using pip, e.g.
 
@@ -49,7 +49,7 @@ experiment = dataset.get_experiment(name='exp_1_low_noise')
 observations = experiment.as_pandas_dataframe()
 ```
 
-See the table [below](#dataset-description) for all the available experiments and their names.
+See the table below for all the available experiments and their names.
 
 ## Dataset Description
 
