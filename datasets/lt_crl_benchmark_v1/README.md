@@ -18,11 +18,15 @@ and
 
 ```
 @article{gamellabing2025sanity,
-  title     = {Sanity Checking Causal Representation Learning on a Simple Real-World System},
-  author    = {Gamella*, Juan L. and Bing*, Simon and Runge, Jakob},
-  year      = {2025},
-  journal   = {arXiv preprint arXiv:TODO},
-  eprint    = {TODO},
+  title = 	 {Sanity Checking Causal Representation Learning on a Simple Real-World System},
+  author =       {Gamella*, Juan L. and Bing*, Simon and Runge, Jakob},
+  booktitle = 	 {Proceedings of the 42nd International Conference on Machine Learning},
+  pages = 	 {18143--18169},
+  year = 	 {2025},
+  volume = 	 {267},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {13--19 Jul},
+  publisher =    {PMLR},
   note      = {*equal contribution}
 }
 ```
