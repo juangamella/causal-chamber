@@ -57,11 +57,11 @@ See the table [below](#dataset-description) for all the available experiments an
 |:------------:|:-------------:|
 | [Light Tunnel Mk2](https://docs.causalchamber.ai/the-chambers/light-tunnel-mk2) | [linked\_leds](https://cchamber-box.s3.eu-central-2.amazonaws.com/config_doc_lt_mk2_linked_leds.pdf) |
 
-This dataset contains the experimental data used in the 2026 paper ["*Identifying Causal Effects Using a Single Proxy Variable*"](https://arxiv.org/pdf/2604.09135) by Silvan Vollmer, Niklas Pfister and Sebastian Weichwald. The paper studies the problem of causal effect estimation when the confounder can only be indirectly observed through a noisy measurement (proxy). The authors use the [Light Tunnel Mk2](https://docs.causalchamber.ai/the-chambers/light-tunnel-mk2) from Causal Chamber® to evaluate their method on a real, physical system matching this setting. The setup, including the used chamber inputs, is shown in the figure below.
+This dataset contains the experimental data used in the 2026 paper ["*Identifying Causal Effects Using a Single Proxy Variable*"](https://arxiv.org/pdf/2604.09135) by Silvan Vollmer, Niklas Pfister and Sebastian Weichwald. The paper studies the problem of causal effect estimation when the confounder can only be indirectly observed through a noisy measurement (proxy). The authors use the [Light Tunnel Mk2](https://docs.causalchamber.ai/the-chambers/light-tunnel-mk2) from Causal Chamber® to evaluate their method on a real, physical system matching this setting. The setup is shown in the figure below.
 
 ![The chamber setup for the paper.](https://cchamber-box.s3.eu-central-2.amazonaws.com/figure_setup.png)
 
-See the [documentation](https://cchamber-box.s3.eu-central-2.amazonaws.com/config_doc_lt_mk2_linked_leds.pdf) of the linked\_leds configuration for a detailed description of all variables and the causal ground-truth graph of the physical system. The table below describes the experiments in the dataset.
+See the [documentation](https://cchamber-box.s3.eu-central-2.amazonaws.com/config_doc_lt_mk2_linked_leds.pdf) of the linked\_leds configuration for a detailed description of the variables and the complete causal ground-truth graph of the physical system. The table below describes the experiments in the dataset.
 
 | Experiment             | Generator                                    | Description |
 |:----------------------:|:--------------------------------------------:|:------------|
@@ -78,7 +78,7 @@ See the [documentation](https://cchamber-box.s3.eu-central-2.amazonaws.com/confi
 
 ## Replicating the experiments using the [Remote Lab](https://causalchamber.ai?utm_source=spicedataset)
 
-You can collect a fresh copy of the datasets from a Causal Chamber® by running the script [`generators/spice.py`](generators/spice.py). To do so, you will need access to the [Remote Lab](https://causalchamber.ai?utm_source=spicedataset). The file [`generators/requirements.txt`](generators/requirements.txt) contains the dependencies needed by the script.
+You can collect a fresh copy of the datasets from a Causal Chamber® by running the script [`generators/spice.py`](generators/spice.py). You will need to edit the script with your [credentials](https://docs.causalchamber.ai/remote-lab/quickstart) for the Remote Lab; you can request access [here](https://forms.causalchamber.ai/lab). The file [`generators/requirements.txt`](generators/requirements.txt) contains the dependencies needed by the script.
 
 ## Licenses
 
