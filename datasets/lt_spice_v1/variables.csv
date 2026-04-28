@@ -1,0 +1,51 @@
+column_name,latex_name,description
+timestamp,,The timestamp (in unix time) of the measurement with an error of a few milliseconds.
+config,,The configuration of the chamber when this measurement was taken.
+counter,,The counter of this measurement - used for error control.
+flag,,User-defined flag.
+intervention,,Has a value of 1 if this is the first measurement after a SET instruction - 0 otherwise.
+red,R,See appendix II of the original paper.
+green,G,See appendix II of the original paper.
+blue,B,See appendix II of the original paper.
+osr_c,O_C,See appendix II of the original paper.
+v_c,R_C,See appendix II of the original paper.
+current,\tilde{C},See appendix II of the original paper.
+pol_1,\theta_1,See appendix II of the original paper.
+pol_2,\theta_2,See appendix II of the original paper.
+osr_angle_1,O_1,See appendix II of the original paper.
+osr_angle_2,O_2,See appendix II of the original paper.
+v_angle_1,R_1,See appendix II of the original paper.
+v_angle_2,R_2,See appendix II of the original paper.
+angle_1,\tilde{\theta}_1,See appendix II of the original paper.
+angle_2,\tilde{\theta}_2,See appendix II of the original paper.
+ir_1,\tilde{I}_1,See appendix II of the original paper.
+vis_1,\tilde{V}_1,See appendix II of the original paper.
+ir_2,\tilde{I}_2,See appendix II of the original paper.
+vis_2,\tilde{V}_2,See appendix II of the original paper.
+ir_3,\tilde{I}_3,See appendix II of the original paper.
+vis_3,\tilde{V}_3,See appendix II of the original paper.
+l_11,L_{11},See appendix II of the original paper.
+l_12,L_{12},See appendix II of the original paper.
+l_21,L_{21},See appendix II of the original paper.
+l_22,L_{22},See appendix II of the original paper.
+l_31,L_{31},See appendix II of the original paper.
+l_32,L_{32},See appendix II of the original paper.
+diode_ir_1,D^I_1,See appendix II of the original paper.
+diode_vis_1,D^V_1,See appendix II of the original paper.
+diode_ir_2,D^I_2,See appendix II of the original paper.
+diode_vis_2,D^V_2,See appendix II of the original paper.
+diode_ir_3,D^I_3,See appendix II of the original paper.
+diode_vis_3,D^V_3,See appendix II of the original paper.
+t_ir_1,T^I_1,See appendix II of the original paper.
+t_vis_1,T^V_1,See appendix II of the original paper.
+t_ir_2,T^I_2,See appendix II of the original paper.
+t_vis_2,T^V_2,See appendix II of the original paper.
+t_ir_3,T^I_3,See appendix II of the original paper.
+t_vis_3,T^V_3,See appendix II of the original paper.
+camera,,Whether an image was captured together with this measurement.
+v_board,,The reference voltage of the Arduino board - used for quality control and diagnosis.
+v_reg,,The reference voltage of the voltage regulator - used for quality control and diagnosis.
+aperture,\text{Ap},See appendix II of the original paper.
+iso,\text{ISO},See appendix II of the original paper.
+shutter_speed,T_\text{Im},See appendix II of the original paper.
+image_file,,The filename of the image file corresponding to this observation.
