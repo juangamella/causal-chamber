@@ -47,11 +47,11 @@ See the table [below](#dataset-description) for all the available experiments an
 |:--------------------:|:----------------:|
 | Light Tunnel Mk2     | lt_mk2_standard  |
 
-This dataset contains the randomized experiments to validate the ground-truth graph of the Light Tunnel Mk2 in its standard configuration. The experiments implement the binary-intervention validation procedure: for each manipulable variable, all other manipulable variables are held fixed at their context values while the target is alternated randomly between two levels ($x^A$ and $x^B$). The exact values of $N$, $T$, $x^A$, $x^B$, and context settings for each experiment are given in [`lt_validation_configs.csv`](lt_validation_configs.csv).
+This dataset contains the randomized experiments to validate the ground-truth graph of the Light Tunnel Mk2 in its standard configuration. The experiments implement the binary-intervention validation procedure described in [Appendix V](https://cchamber-box.s3.eu-central-2.amazonaws.com/nature_paper_appendices.pdf) of the original paper: for each manipulable variable, all other manipulable variables are held fixed at their context values while the target is alternated randomly between two levels ($x^A$ and $x^B$). The exact values of $N$, $T$, $x^A$, $x^B$, and context settings for each experiment are given in [`lt_validation_configs.csv`](lt_validation_configs.csv).
 
-This dataset is the Mk2 successor of [`lt_validate_v1`](../lt_validate_v1), which covered the original Light Tunnel prototype. The variable naming differences between the two chambers are documented in the [original prototypes page](https://docs.causalchamber.ai/the-chambers/original-prototypes.md) of the documentation.
+This dataset is the Mk2 successor of [`lt_validate_v1`](../lt_validate_v1), which covered the original prototype (Mk1) of the Light Tunnel. The variable naming differences between the two chambers are documented in the [original prototypes page](https://docs.causalchamber.ai/the-chambers/original-prototypes.md) of the documentation.
 
-The file [variables.csv](variables.csv) contains a description of each variable (column) in the `.csv` files. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
+The file [variables.csv](variables.csv) contains a description of each variable (column) in the `.csv` files. See the [documentation](https://docs.causalchamber.ai/the-chambers/light-tunnel-mk2x) for more details. The table below describes the experiments in the dataset. For a precise description of each experiment protocol, see the corresponding Python script used to generate it.
 
 | Experiment | Generator | Description |
 |:----------:|:---------:|:------------|
