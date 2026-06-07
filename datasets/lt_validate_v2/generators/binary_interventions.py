@@ -38,7 +38,7 @@ import causalchamber.lab as lab
 
 CHAMBER_ID = "lt-demo-ch4lu"
 CONFIG = "lt_mk2_standard"
-CREDENTIALS_FILE = os.path.join(os.path.dirname(__file__), "../../../.credentials")
+CREDENTIALS_FILE = os.path.join(os.path.dirname(__file__), "/tmp/.credentials")
 
 dirname = os.path.dirname(__file__)
 filename = os.path.join(dirname, "../lt_validation_configs.csv")
