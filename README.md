@@ -1,4 +1,4 @@
-# Causal Chamber®: Dataset Repository
+# Causal Chamber<sup>®</sup>: Dataset Repository
 
 [![PyPI version](https://badge.fury.io/py/causalchamber.svg)](https://badge.fury.io/py/causalchamber)
 [![Downloads](https://static.pepy.tech/badge/causalchamber)](https://pepy.tech/project/causalchamber)
