@@ -1,4 +1,4 @@
-# Causal Chamber: Dataset Repository
+# Causal Chamber®: Dataset Repository
 
 [![PyPI version](https://badge.fury.io/py/causalchamber.svg)](https://badge.fury.io/py/causalchamber)
 [![Downloads](https://static.pepy.tech/badge/causalchamber)](https://pepy.tech/project/causalchamber)
@@ -6,7 +6,8 @@
 [![Donate](https://img.shields.io/static/v1.svg?logo=Github%20Sponsors&label=donate&message=Github%20Sponsors&color=e874ff)](https://github.com/sponsors/juangamella)
 
 
-![The Causal Chambers: (left) the wind tunnel, and (right) the light tunnel with the front panel removed to show its interior.](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/the_chambers.jpg)
+![The Causal Chambers: (left) the wind tunnel, and (right) the light tunnel with the front panel removed to show its interior.](https://cchamber-box.s3.eu-central-2.amazonaws.com/the_chambers_mk2.jpg)
+
 
 This repository contains datasets collected from the _causal chambers_, the two devices described in the 2025 paper [*Causal chambers as a real-world physical testbed for AI methodology*](https://www.nature.com/articles/s42256-024-00964-x) by Juan L. Gamella, Jonas Peters and Peter Bühlmann. The repository is regularly updated with new datasets collected from the chambers.
 
