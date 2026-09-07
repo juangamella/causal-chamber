@@ -7,7 +7,7 @@
 
 ![The Causal Chambers: (left) the wind tunnel, and (right) the light tunnel with the front panel removed to show its interior.](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/the_chambers.jpg)
 
-Here you can find the resources to build the wind tunnel and light tunnel prototypes (Mk 1) described in the original [paper](https://www.nature.com/articles/s42256-024-00964-x).
+Here you can find the resources to build the [original Mk1 prototypes](https://docs.causalchamber.ai/the-chambers/original-prototypes) described in the original [paper](https://www.nature.com/articles/s42256-024-00964-x).
 
 - [`arduino/`](arduino/) contains the code for the arduino boards that control each chamber
 - [`control/`](control/) contains the python code to connect your computer to the chambers and run experiments
@@ -15,14 +15,14 @@ Here you can find the resources to build the wind tunnel and light tunnel protot
 - [`schematics/`](schematics/) contains the bill of materials and schematics for the electronics of each chamber
 
 > [!TIP]
-> We're preparing to release the build resources for the [Mk2 chambers](https://docs.causalchamber.ai/the-chambers/how-they-work), the newer version we use in our [Remote Lab](https://causalchamber.ai).
+> We're preparing to release the build resources for the [Mk2 chambers](https://docs.causalchamber.ai/the-chambers/how-they-work), the newer version we use in our [Remote Lab](https://causalchamber.ai). Stay tuned!
 
 ## Disclaimer
 
 To build the chambers you will need some common assembly tools and access to some more specialized equipment: a laser cutter of sufficient size and an electronics bench (for soldering and testing). We assume that you already posses the pertinent knowledge to use them.
 
 > [!WARNING]
-> Since publication, some of the components needed for the prototypes are no longer manufactured. You will need to find a replacement for the ACS70331 2.5A current sensor. Depending on where you live, the Grove chips with the DPS310 barometers may also be difficult to find (see [here](https://wiki.seeedstudio.com/Sensor_barometer/) for alternatives).
+> Since publication, some of the components needed for the [Mk1 prototypes](https://docs.causalchamber.ai/the-chambers/original-prototypes) are no longer manufactured. You will need to find a replacement for the ACS70331 2.5A current sensor. Depending on where you live, the Grove chips with the DPS310 barometers may also be difficult to find (see [here](https://wiki.seeedstudio.com/Sensor_barometer/) for alternatives).
 
 ## Remote Lab API
 
