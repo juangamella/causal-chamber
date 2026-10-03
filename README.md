@@ -34,11 +34,11 @@ See also the [separate repository](https://github.com/juangamella/causal-chamber
 
 ## Need help?
 
-If you need help choosing the right dataset for your work, please write us an [email](mailto:juangamella@gmail.com).
+If you need help choosing the right dataset for your work, please write us an [email](mailto:support@causalchamber.ai).
 
 ## Available datasets
 
-We are open to suggestions of additional experiments that may prove interesting; please reach out via [email](mailto:juangamella@gmail.com).
+We are open to suggestions of additional experiments that may prove interesting; please reach out via [email](mailto:support@causalchamber.ai).
 
 Each dataset is described in detail in its corresponding page (click the dataset name), together with the download instructions. The chamber configurations are described in [Fig. 3](https://www.nature.com/articles/s42256-024-00964-x/figures/3) of the [manuscript](https://www.nature.com/articles/s42256-024-00964-x).
 
