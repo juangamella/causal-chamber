@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use these datasets, please cite the paper below."
+title: "Causal Chamber Datasets"
+type: dataset
+authors:
+  - family-names: Gamella
+    given-names: Juan L.
+  - family-names: Peters
+    given-names: Jonas
+  - family-names: Bühlmann
+    given-names: Peter
+repository-code: "https://github.com/juangamella/causal-chamber"
+abstract: "Datasets and resources from the causal chambers, a real-world physical testbed for AI methodology."
+keywords:
+  - causal inference
+  - machine learning
+  - benchmark
+  - physical testbed
+preferred-citation:
+  type: article
+  title: "Causal chambers as a real-world physical testbed for AI methodology"
+  authors:
+    - family-names: Gamella
+      given-names: Juan L.
+    - family-names: Peters
+      given-names: Jonas
+    - family-names: Bühlmann
+      given-names: Peter
+  journal: "Nature Machine Intelligence"
+  year: 2025
+  doi: "10.1038/s42256-024-00964-x"
