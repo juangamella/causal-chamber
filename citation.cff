@@ -14,7 +14,15 @@ abstract: "Datasets and resources from the causal chambers, a real-world physica
 keywords:
   - causal inference
   - machine learning
+  - statistics
   - benchmark
+  - physical AI
+  - simulation-based inference
+  - foundation models
+  - world models
+  - predictive maintenance
+  - root-cause analysis
+  - bayesian optimization
   - physical testbed
 preferred-citation:
   type: article
@@ -29,3 +37,4 @@ preferred-citation:
   journal: "Nature Machine Intelligence"
   year: 2025
   doi: "10.1038/s42256-024-00964-x"
+
