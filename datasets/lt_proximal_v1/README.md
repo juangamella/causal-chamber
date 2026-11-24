@@ -45,7 +45,7 @@ from causalchamber.datasets import Dataset
 dataset = Dataset('lt_proximal_v1', root='./', download=True)
 
 # Load the observations from an experiment (see experiment names below)
-experiment = dataset.get_experiment(name='TODO')
+experiment = dataset.get_experiment(name='weak_confounding_linear_proxy_high_a500')
 observations = experiment.as_pandas_dataframe()
 ```
 
@@ -59,11 +59,50 @@ See the table below for all the available experiments and their names.
 
 This dataset contains the experimental data used in the 2026 paper ["*ProximalFM: Amortized Proximal Causal Inference under Hidden Confounding*"](https://arxiv.org/pdf/2610.08078) by Christophe Muller, Ayub Kharel, Alex Luedtke, Chan Park, Eric Tchetgen Tchetgen, Juan L. Gamella, Rahul G. Krishnan, Ricardo Silva and Jakob Zeitler. The paper proposes ProximalFM, a tabular foundation model that estimates the posterior distribution of the conditional average treatment effect (CATE) when confounders are unobserved and only proxy variables are available. The authors use the [Light Tunnel Mk2](https://docs.causalchamber.ai/the-chambers/light-tunnel-mk2) from Causal Chamber® to evaluate their method on a real, physical system with a known causal graph; see Muller et al. (2026, [Appendix E](https://arxiv.org/pdf/2610.08078#page=76)) for details.
 
-See the [documentation](https://cchamber-box.s3.eu-central-2.amazonaws.com/config_doc_lt_mk2_standard.pdf) of the standard configuration for a detailed description of the Chamber variables. In the experiments, the authors [introduce additional causal effects](https://docs.causalchamber.ai/case-studies/causal-inference/generating-real-data-with-a-known-causal-structure#adding-causal-effects) using software control functions that set some of the Chamber's inputs as a function of some of its sensor measurements; see Muller et al. (2026, [Appendix E](https://arxiv.org/pdf/2610.08078#page=76)) and the sampling notebook at [`generators/sampling.ipynb`](generators/sampling.ipynb) for details. The table below describes the experiments in the dataset.
+See the [documentation](https://cchamber-box.s3.eu-central-2.amazonaws.com/config_doc_lt_mk2_standard.pdf) of the standard configuration for a detailed description of the Chamber variables. In the experiments, the authors [introduce additional causal effects](https://docs.causalchamber.ai/case-studies/causal-inference/generating-real-data-with-a-known-causal-structure#adding-causal-effects) using software control functions that set some of the Chamber's inputs as a function of some of its sensor measurements; see Muller et al. (2026, [Appendix E](https://arxiv.org/pdf/2610.08078#page=76)) and the sampling notebook at [`generators/sampling.ipynb`](generators/sampling.ipynb) for details.
+
+The dataset contains 24 experiments of N = 1000 observations each. They cross four data-generating processes (weak or strong confounding × linear or non-linear control functions) with three levels of proxy informativeness (high, intermediate, low), and are collected at two treatment drives: a<sub>1</sub> = 500 and a<sub>1</sub> = 350. Apart from the treatment drive, the two sets of experiments follow the same protocol. Muller et al. (2026, [Appendix E](https://arxiv.org/pdf/2610.08078#page=76)) describe the control functions, treatment assignment and proxy-noise levels of each setting.
+
+The variables play the following roles:
+
+- **U** (hidden confounder): the LED drive, stored in `green`. In the strong-confounding settings this drive is applied to the `blue` LED instead.
+- **X** (observed covariate): `red`, set by the control function f<sub>1</sub> from `current_ls_raw`.
+- **Z** (treatment proxy): `led_2_uv`, set by f<sub>2</sub> from `ir_1` plus Gaussian noise.
+- **W** (outcome proxy): `pol_1`, set by f<sub>4</sub> from `vis_1` plus Gaussian noise. `pol_2` is set to `pol_1` + 90° (crossed polarisers) in the weak-confounding settings and to 0 in the strong-confounding settings.
+- **A** (treatment): `led_3_uv > 0`, i.e., `led_3_uv` is 0 or a<sub>1</sub>. A is drawn from a Bernoulli distribution whose true propensity, which depends on `ir_2`, is stored in `pA`.
+- **Y** (outcome): `ir_3`.
+- **Y0**, **Y1**: re-measurements of `ir_3` after setting `led_3_uv` to 0 and then to a<sub>1</sub>, keeping all other inputs fixed. Their mean difference gives the reference average treatment effect.
+
+The remaining columns (`current_ls_raw`, `vis_1`, `ir_1`, `ir_2`) are intermediate measurements. Dropping them together with U (`green`) yields the standard proximal causal inference setting with an unobserved confounder.
+
+The table below describes the experiments in the dataset.
 
 | Experiment             | Generator                                    | Description |
 |:----------------------:|:--------------------------------------------:|:------------|
-| TODO | [`generators/sampling.ipynb`](generators/sampling.ipynb) | TODO |
+| weak\_confounding\_linear\_proxy\_high\_a500 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Weak confounding, linear control functions, high proxy informativeness, treatment drive a<sub>1</sub> = 500. |
+| weak\_confounding\_linear\_proxy\_mid\_a500 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Weak confounding, linear control functions, intermediate proxy informativeness, treatment drive a<sub>1</sub> = 500. |
+| weak\_confounding\_linear\_proxy\_low\_a500 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Weak confounding, linear control functions, low proxy informativeness, treatment drive a<sub>1</sub> = 500. |
+| weak\_confounding\_non\_linear\_proxy\_high\_a500 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Weak confounding, non-linear control functions, high proxy informativeness, treatment drive a<sub>1</sub> = 500. |
+| weak\_confounding\_non\_linear\_proxy\_mid\_a500 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Weak confounding, non-linear control functions, intermediate proxy informativeness, treatment drive a<sub>1</sub> = 500. |
+| weak\_confounding\_non\_linear\_proxy\_low\_a500 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Weak confounding, non-linear control functions, low proxy informativeness, treatment drive a<sub>1</sub> = 500. |
+| strong\_confounding\_linear\_proxy\_high\_a500 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Strong confounding, linear control functions, high proxy informativeness, treatment drive a<sub>1</sub> = 500. |
+| strong\_confounding\_linear\_proxy\_mid\_a500 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Strong confounding, linear control functions, intermediate proxy informativeness, treatment drive a<sub>1</sub> = 500. |
+| strong\_confounding\_linear\_proxy\_low\_a500 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Strong confounding, linear control functions, low proxy informativeness, treatment drive a<sub>1</sub> = 500. |
+| strong\_confounding\_non\_linear\_proxy\_high\_a500 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Strong confounding, non-linear control functions, high proxy informativeness, treatment drive a<sub>1</sub> = 500. |
+| strong\_confounding\_non\_linear\_proxy\_mid\_a500 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Strong confounding, non-linear control functions, intermediate proxy informativeness, treatment drive a<sub>1</sub> = 500. |
+| strong\_confounding\_non\_linear\_proxy\_low\_a500 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Strong confounding, non-linear control functions, low proxy informativeness, treatment drive a<sub>1</sub> = 500. |
+| weak\_confounding\_linear\_proxy\_high\_a350 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Weak confounding, linear control functions, high proxy informativeness, treatment drive a<sub>1</sub> = 350. |
+| weak\_confounding\_linear\_proxy\_mid\_a350 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Weak confounding, linear control functions, intermediate proxy informativeness, treatment drive a<sub>1</sub> = 350. |
+| weak\_confounding\_linear\_proxy\_low\_a350 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Weak confounding, linear control functions, low proxy informativeness, treatment drive a<sub>1</sub> = 350. |
+| weak\_confounding\_non\_linear\_proxy\_high\_a350 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Weak confounding, non-linear control functions, high proxy informativeness, treatment drive a<sub>1</sub> = 350. |
+| weak\_confounding\_non\_linear\_proxy\_mid\_a350 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Weak confounding, non-linear control functions, intermediate proxy informativeness, treatment drive a<sub>1</sub> = 350. |
+| weak\_confounding\_non\_linear\_proxy\_low\_a350 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Weak confounding, non-linear control functions, low proxy informativeness, treatment drive a<sub>1</sub> = 350. |
+| strong\_confounding\_linear\_proxy\_high\_a350 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Strong confounding, linear control functions, high proxy informativeness, treatment drive a<sub>1</sub> = 350. |
+| strong\_confounding\_linear\_proxy\_mid\_a350 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Strong confounding, linear control functions, intermediate proxy informativeness, treatment drive a<sub>1</sub> = 350. |
+| strong\_confounding\_linear\_proxy\_low\_a350 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Strong confounding, linear control functions, low proxy informativeness, treatment drive a<sub>1</sub> = 350. |
+| strong\_confounding\_non\_linear\_proxy\_high\_a350 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Strong confounding, non-linear control functions, high proxy informativeness, treatment drive a<sub>1</sub> = 350. |
+| strong\_confounding\_non\_linear\_proxy\_mid\_a350 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Strong confounding, non-linear control functions, intermediate proxy informativeness, treatment drive a<sub>1</sub> = 350. |
+| strong\_confounding\_non\_linear\_proxy\_low\_a350 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Strong confounding, non-linear control functions, low proxy informativeness, treatment drive a<sub>1</sub> = 350. |
 
 ## Changelog
 

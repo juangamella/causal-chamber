@@ -76,7 +76,7 @@ See the [documentation](https://cchamber-box.s3.eu-central-2.amazonaws.com/confi
 |:---------------:|:----------:|:-------------------------------------------------------:|
 | v1.0            | 28.04.2026 | Initial release of the dataset.                         |
 
-## Replicating the experiments using the [Remote Lab](https://causalchamber.ai?utm_source=spicedataset)
+## Replicating the experiments using the [Remote Lab](https://docs.causalchamber.ai/remote-lab/quickstart)
 
 You can collect a fresh copy of the datasets from a Causal Chamber® by running the script [`generators/spice.py`](generators/spice.py). You will need to edit the script with your [credentials](https://docs.causalchamber.ai/remote-lab/quickstart) for the Remote Lab; you can request access [here](https://forms.causalchamber.ai/lab). The file [`generators/requirements.txt`](generators/requirements.txt) contains the dependencies needed by the script.
 
