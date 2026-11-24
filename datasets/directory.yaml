@@ -103,7 +103,7 @@ datasets:
   lt_proximal_v1:
     chamber: "lt"
     image: False
-    url: "TODO"
-    md5: "TODO"
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_proximal_v1.zip"
+    md5: "086c9396ce02d79637b0ab47281a433b"
 
     

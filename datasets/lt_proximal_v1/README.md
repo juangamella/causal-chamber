@@ -28,7 +28,7 @@ and
 
 | Link     | MD5 Checksum                     |
 |:--------:|:--------------------------------:|
-| [ZIP file](TODO) | TODO |
+| [ZIP file](https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_proximal_v1.zip) | 086c9396ce02d79637b0ab47281a433b |
 
 You can also import the dataset directly into your Python code with the [`causalchamber`](https://github.com/juangamella/causal-chamber-package) package. Install it using pip, e.g.
 
@@ -70,7 +70,7 @@ The dataset contains a total of 24 experiments of N = 1000 observations each, re
 
 \* The experiments `strong_confounding_linear_proxy_low_a500` and `strong_confounding_linear_proxy_low_a350` use (k<sub>Z</sub>, k<sub>W</sub>) = (0.6, 2.5) instead, to retain a measurable confounding signal; see the paragraph *Treatment and proxy-information settings* in Muller et al. (2026, [Appendix E](https://arxiv.org/pdf/2610.08078#page=77)).
 
-The [Chamber variables](https://cchamber-box.s3.eu-central-2.amazonaws.com/config_doc_lt_mk2_standard.pdf) map to the variables in the paper (see Muller et al., 2026, [Figures E.1](https://arxiv.org/pdf/2610.08078#page=76) and [E.2](https://arxiv.org/pdf/2610.08078#page=79)) as follows: U = `green` (the drive of the confounder LED; in the strong-confounding settings this value is applied to the `blue` LED but still stored in the `green` column), X = `red`, Z = `led_2_uv`, W = `pol_1`, A = `led_3_uv > 0`, Y = `ir_3`. The columns `Y0` and `Y1` contain the counterfactual outcomes, and `pA` the true propensity score.
+The [Chamber variables](https://cchamber-box.s3.eu-central-2.amazonaws.com/config_doc_lt_mk2_standard.pdf) map to the variables in the paper (see Muller et al., 2026, [Figures E.1](https://arxiv.org/pdf/2610.08078#page=76) and [E.2](https://arxiv.org/pdf/2610.08078#page=79)) as follows: U = `green` (the drive of the confounder LED; in the strong-confounding settings this value is applied to the `blue` LED but still stored in the `green` column), X = `red`, Z = `led_2_uv`, W = `pol_1`, A = `led_3_uv > 0`, Y = `ir_3`. The columns `Y0` and `Y1` contain the counterfactual outcomes, and `pA` the true propensity score, i.e., the probability with which A was assigned as a function of `ir_2` (see the paragraph *Treatment and proxy-information settings* in Muller et al., 2026, [Appendix E](https://arxiv.org/pdf/2610.08078#page=77)).
 
 To obtain a dataframe with the variable names used in the paper, you can run:
 
