@@ -14,6 +14,9 @@ Here you can find the resources to build the wind tunnel and light tunnel protot
 - [`lasercuts/`](lasercuts/) contains the lasercutter diagrams
 - [`schematics/`](schematics/) contains the bill of materials and schematics for the electronics of each chamber
 
+> [!TIP]
+> We're preparing to release the build resources for the [Mk2 chambers](https://docs.causalchamber.ai/the-chambers/how-they-work), the newer version we use in our [Remote Lab](https://docs.causalchamber.ai/remote-lab/quickstart). Stay tuned!
+
 ## Disclaimer
 
 To build the chambers you will need some common assembly tools and access to some more specialized equipment: a laser cutter of sufficient size and an electronics bench (for soldering and testing). We assume that you already posses the pertinent knowledge to use them.
@@ -24,7 +27,7 @@ We do not actively maintain this hardware repository, but if you write us an [em
 
 ## Remote Lab API
 
-We maintain a pool of chambers that you can operate in real-time using in our Remote Lab API. Visit [causalchamber.ai](https://causalchamber.ai/) for more information.
+We maintain a pool of chambers that you can use to collect datasets or run real-time experiments through our [Python API](https://docs.causalchamber.ai/remote-lab/quickstart).
 
 ## Licenses
 
