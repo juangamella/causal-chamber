@@ -1,4 +1,5 @@
 numpy
 pandas
-scipy
+matplotlib
+seaborn
 causalchamber>=0.2.8

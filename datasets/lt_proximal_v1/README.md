@@ -59,11 +59,11 @@ See the table below for all the available experiments and their names.
 
 This dataset contains the experimental data used in the 2026 paper ["*ProximalFM: Amortized Proximal Causal Inference under Hidden Confounding*"](https://arxiv.org/pdf/2610.08078) by Christophe Muller, Ayub Kharel, Alex Luedtke, Chan Park, Eric Tchetgen Tchetgen, Juan L. Gamella, Rahul G. Krishnan, Ricardo Silva and Jakob Zeitler. The paper proposes ProximalFM, a tabular foundation model that estimates the posterior distribution of the conditional average treatment effect (CATE) when confounders are unobserved and only proxy variables are available. The authors use the [Light Tunnel Mk2](https://docs.causalchamber.ai/the-chambers/light-tunnel-mk2) from Causal Chamber® to evaluate their method on a real, physical system with a known causal graph; see Muller et al. (2026, [Appendix E](https://arxiv.org/pdf/2610.08078#page=76)) for details.
 
-See the [documentation](https://cchamber-box.s3.eu-central-2.amazonaws.com/config_doc_lt_mk2_standard.pdf) of the standard configuration for a detailed description of the variables and the complete causal ground-truth graph of the physical system. The table below describes the experiments in the dataset.
+See the [documentation](https://cchamber-box.s3.eu-central-2.amazonaws.com/config_doc_lt_mk2_standard.pdf) of the standard configuration for a detailed description of the Chamber variables. In the experiments, the authors [introduce additional causal effects](https://docs.causalchamber.ai/case-studies/causal-inference/generating-real-data-with-a-known-causal-structure#adding-causal-effects) using software control functions that set some of the Chamber's inputs as a function of some of its sensor measurements; see Muller et al. (2026, [Appendix E](https://arxiv.org/pdf/2610.08078#page=76)) and the sampling notebook at [`generators/sampling.ipynb`](generators/sampling.ipynb) for details. The table below describes the experiments in the dataset.
 
 | Experiment             | Generator                                    | Description |
 |:----------------------:|:--------------------------------------------:|:------------|
-| TODO | [`generators/TODO.py`](generators/TODO.py) | TODO |
+| TODO | [`generators/sampling.ipynb`](generators/sampling.ipynb) | TODO |
 
 ## Changelog
 
@@ -71,9 +71,9 @@ See the [documentation](https://cchamber-box.s3.eu-central-2.amazonaws.com/confi
 |:---------------:|:----------:|:-------------------------------------------------------:|
 | v1.0            | 24.11.2026 | Initial release of the dataset.                         |
 
-## Replicating the experiments using the [Remote Lab](https://causalchamber.ai?utm_source=proximaldataset)
+## Replicating the experiments using the [Remote Lab](https://docs.causalchamber.ai/remote-lab/quickstart)
 
-You can collect a fresh copy of the datasets from a Causal Chamber® by running the script [`generators/TODO.py`](generators/TODO.py). You will need to edit the script with your [credentials](https://docs.causalchamber.ai/remote-lab/quickstart) for the Remote Lab; you can request access [here](https://forms.causalchamber.ai/lab). The file [`generators/requirements.txt`](generators/requirements.txt) contains the dependencies needed by the script.
+You can collect a fresh copy of the datasets from a Causal Chamber® by running the notebook [`generators/sampling.ipynb`](generators/sampling.ipynb). You will need to edit the notebook with your [credentials](https://docs.causalchamber.ai/remote-lab/quickstart) for the Remote Lab; you can request access [here](https://forms.causalchamber.ai/lab). The file [`generators/requirements.txt`](generators/requirements.txt) contains the dependencies needed by the notebook.
 
 ## Licenses
 
