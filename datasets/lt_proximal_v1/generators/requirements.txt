@@ -1,0 +1,4 @@
+numpy
+pandas
+scipy
+causalchamber>=0.2.8
