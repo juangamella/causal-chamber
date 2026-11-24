@@ -59,7 +59,7 @@ See the table below for all the available experiments and their names.
 
 This dataset contains the experimental data used in the 2026 paper ["*ProximalFM: Amortized Proximal Causal Inference under Hidden Confounding*"](https://arxiv.org/pdf/2610.08078) by Christophe Muller, Ayub Kharel, Alex Luedtke, Chan Park, Eric Tchetgen Tchetgen, Juan L. Gamella, Rahul G. Krishnan, Ricardo Silva and Jakob Zeitler. The paper proposes ProximalFM, a tabular foundation model that estimates the posterior distribution of the conditional average treatment effect (CATE) when confounders are unobserved and only proxy variables are available. The authors use the [Light Tunnel Mk2](https://docs.causalchamber.ai/the-chambers/light-tunnel-mk2) from Causal Chamber® to evaluate their method on a real, physical system with a known causal graph; see Muller et al. (2026, [Appendix E](https://arxiv.org/pdf/2610.08078#page=76)) for details and [Figure E.4](https://arxiv.org/pdf/2610.08078#page=82) for the results.
 
-In the experiments, the authors [introduce additional causal effects](https://docs.causalchamber.ai/case-studies/causal-inference/generating-real-data-with-a-known-causal-structure#adding-causal-effects) using software control functions that set some of the Chamber's inputs as a function of some of its sensor measurements; see Muller et al. (2026, [Appendix E](https://arxiv.org/pdf/2610.08078#page=76)) and the sampling notebook at [`generators/sampling.ipynb`](generators/sampling.ipynb) for details.
+In the experiments, the authors [introduce additional causal effects](https://docs.causalchamber.ai/case-studies/causal-inference/generating-real-data-with-a-known-causal-structure#adding-causal-effects) using software control functions that set some of the Chamber's inputs as a function of some of its sensor measurements; see Muller et al. (2026, [Appendix E](https://arxiv.org/pdf/2610.08078#page=76), [Figure E.2](https://arxiv.org/pdf/2610.08078#page=79)) and the sampling notebook at [`generators/sampling.ipynb`](generators/sampling.ipynb) for details.
 
 The dataset contains a total of 24 experiments of N = 1000 observations each, resulting from the factorial combination of the following settings (see Muller et al., 2026, [Appendix E](https://arxiv.org/pdf/2610.08078#page=76) for details):
 
@@ -70,7 +70,7 @@ The dataset contains a total of 24 experiments of N = 1000 observations each, re
 
 \* The experiments `strong_confounding_linear_proxy_low_a500` and `strong_confounding_linear_proxy_low_a350` use (k<sub>Z</sub>, k<sub>W</sub>) = (0.6, 2.5) instead, to retain a measurable confounding signal; see the paragraph *Treatment and proxy-information settings* in Muller et al. (2026, [Appendix E](https://arxiv.org/pdf/2610.08078#page=77)).
 
-The Chamber variables (see Variable Table in the [documentation](https://cchamber-box.s3.eu-central-2.amazonaws.com/config_doc_lt_mk2_standard.pdf)) map to the variables in the paper (see Muller et al., 2026, [Figures E.1](https://arxiv.org/pdf/2610.08078#page=76) and [E.2](https://arxiv.org/pdf/2610.08078#page=79)) as follows: U = `green` (the drive of the confounder LED; in the strong-confounding settings this value is applied to the `blue` LED but still stored in the `green` column), X = `red`, Z = `led_2_uv`, W = `pol_1`, A = `led_3_uv > 0`, Y = `ir_3`. The columns `Y0` and `Y1` contain the counterfactual outcomes, and `pA` the true propensity score.
+The [Chamber variables](https://cchamber-box.s3.eu-central-2.amazonaws.com/config_doc_lt_mk2_standard.pdf) map to the variables in the paper (see Muller et al., 2026, [Figures E.1](https://arxiv.org/pdf/2610.08078#page=76) and [E.2](https://arxiv.org/pdf/2610.08078#page=79)) as follows: U = `green` (the drive of the confounder LED; in the strong-confounding settings this value is applied to the `blue` LED but still stored in the `green` column), X = `red`, Z = `led_2_uv`, W = `pol_1`, A = `led_3_uv > 0`, Y = `ir_3`. The columns `Y0` and `Y1` contain the counterfactual outcomes, and `pA` the true propensity score.
 
 To obtain a dataframe with the variable names used in the paper, you can run:
 
@@ -109,7 +109,15 @@ The table below describes the experiments in the dataset.
 | strong\_confounding\_non\_linear\_proxy\_mid\_a350 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Strong confounding (blue LED, `pol_2` = 0), non-linear control functions, intermediate proxy informativeness with (k<sub>Z</sub>, k<sub>W</sub>) = (0.75, 0.75), treatment strength a<sub>1</sub> = 350. |
 | strong\_confounding\_non\_linear\_proxy\_low\_a350 | [`generators/sampling.ipynb`](generators/sampling.ipynb) | Strong confounding (blue LED, `pol_2` = 0), non-linear control functions, low proxy informativeness with (k<sub>Z</sub>, k<sub>W</sub>) = (2, 2), treatment strength a<sub>1</sub> = 350. |
 
-**Note on file names.** The notebook [`generators/sampling.ipynb`](generators/sampling.ipynb) writes each experiment to a file named `out_binaryA_counterfactuals_<setting>_proxy_<level>_<suffix>.csv`, where the suffix is `smoothA` for a<sub>1</sub> = 500 and `smoothA_a350` for a<sub>1</sub> = 350. The experiment names drop the `out_binaryA_counterfactuals_` prefix and replace the suffix with `a500` or `a350`, respectively. For example, the notebook output `out_binaryA_counterfactuals_weak_confounding_linear_proxy_high_smoothA.csv` corresponds to the experiment `weak_confounding_linear_proxy_high_a500`, and `out_binaryA_counterfactuals_weak_confounding_linear_proxy_high_smoothA_a350.csv` to `weak_confounding_linear_proxy_high_a350`.
+**Note on file names.** The notebook [`generators/sampling.ipynb`](generators/sampling.ipynb) writes each experiment to a file named `out_binaryA_counterfactuals_<setting>_proxy_<level>_<suffix>.csv`, where the suffix is `smoothA` for a<sub>1</sub> = 500 and `smoothA_a350` for a<sub>1</sub> = 350. The experiment names drop the `out_binaryA_counterfactuals_` prefix and replace the suffix with `a500` or `a350`, respectively. For example:
+
+```
+notebook output: out_binaryA_counterfactuals_weak_confounding_linear_proxy_high_smoothA.csv
+experiment:                                  weak_confounding_linear_proxy_high_a500
+
+notebook output: out_binaryA_counterfactuals_weak_confounding_linear_proxy_high_smoothA_a350.csv
+experiment:                                  weak_confounding_linear_proxy_high_a350
+```
 
 ## Changelog
 
