@@ -1,4 +1,4 @@
-last_updated: 2025-02-25
+last_updated: 2026-11-24
 datasets:
   wt_changepoints_v1:
     chamber: "wt"
@@ -100,5 +100,10 @@ datasets:
     image: False
     url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_spice_v1.zip"
     md5: "47a2be5bd43ec5e098a15ea91bd2e60d"
+  lt_proximal_v1:
+    chamber: "lt"
+    image: False
+    url: "https://causalchamber.s3.eu-central-1.amazonaws.com/downloadables/lt_proximal_v1.zip"
+    md5: "086c9396ce02d79637b0ab47281a433b"
 
     

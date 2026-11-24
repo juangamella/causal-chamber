@@ -1,0 +1,5 @@
+numpy
+pandas
+matplotlib
+seaborn
+causalchamber>=0.2.8

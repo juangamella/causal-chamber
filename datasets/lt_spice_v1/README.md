@@ -66,7 +66,7 @@ See the [documentation](https://cchamber-box.s3.eu-central-2.amazonaws.com/confi
 | Experiment             | Generator                                    | Description |
 |:----------------------:|:--------------------------------------------:|:------------|
 | exp\_1\_low\_noise | [`generators/spice.py`](generators/spice.py) | Data for Experiment I (Low Noise) used in Vollmer et al. (2026, [Figure 4](https://arxiv.org/pdf/2604.09135#page=14.21)). The sampling procedure for the chamber parameters (marked I/P in the figure above) are given in Vollmer et al. (2026, [Table 6](https://arxiv.org/pdf/2604.09135#page=44)). |
-| exp\_2\_noisy | [`generators/spice.py`](generators/spice.py) | Data for Experiment II (Noisy) used in Vollmer et al. (2026, [Figure 4](https://arxiv.org/pdf/2604.09135#page=14.21)). The sampling procedure for the chamber parameters (marked I/P in the figure above) are given in Vollmer et al. (2026, [Table 6](https://arxiv.org/pdf/2604.09135#page=44)). |            |
+| exp\_2\_noisy | [`generators/spice.py`](generators/spice.py) | Data for Experiment II (Noisy) used in Vollmer et al. (2026, [Figure 4](https://arxiv.org/pdf/2604.09135#page=14.21)). The sampling procedure for the chamber parameters (marked I/P in the figure above) are given in Vollmer et al. (2026, [Table 6](https://arxiv.org/pdf/2604.09135#page=44)). |
 | exp\_3\_spice\_net\_noise\_1 | [`generators/spice.py`](generators/spice.py) | Data for experiment III-1 (SPICE-Net Noise) used to estimate the ground-truth noise distribution in the setting of Experiment I. The sampling procedure for the chamber parameters (marked I/P in the figure above) are given in Vollmer et al. (2026, [Table 6](https://arxiv.org/pdf/2604.09135#page=44)).  |
 | exp\_3\_spice\_net\_noise\_2 | [`generators/spice.py`](generators/spice.py) | Data for experiment III-2 (SPICE-Net Noise) used to estimate the ground-truth noise distribution in the setting of Experiment II. The sampling procedure for the chamber parameters (marked I/P in the figure above) are given in Vollmer et al. (2026, [Table 6](https://arxiv.org/pdf/2604.09135#page=44)).  |
 
@@ -76,7 +76,7 @@ See the [documentation](https://cchamber-box.s3.eu-central-2.amazonaws.com/confi
 |:---------------:|:----------:|:-------------------------------------------------------:|
 | v1.0            | 28.04.2026 | Initial release of the dataset.                         |
 
-## Replicating the experiments using the [Remote Lab](https://causalchamber.ai?utm_source=spicedataset)
+## Replicating the experiments using the [Remote Lab](https://docs.causalchamber.ai/remote-lab/quickstart)
 
 You can collect a fresh copy of the datasets from a Causal Chamber® by running the script [`generators/spice.py`](generators/spice.py). You will need to edit the script with your [credentials](https://docs.causalchamber.ai/remote-lab/quickstart) for the Remote Lab; you can request access [here](https://forms.causalchamber.ai/lab). The file [`generators/requirements.txt`](generators/requirements.txt) contains the dependencies needed by the script.
 
